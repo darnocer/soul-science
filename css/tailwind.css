@@ -1,0 +1,406 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #39b4c4;
+  --secondary: #eab307;
+  --tertiary: #30a185;
+  --accent: #b93f3f;
+  --gray-100: #ffffff;
+  --gray-200: #e6e6e6;
+  --gray-300: #cdcccc;
+  --gray-400: #b3b3b3;
+  --gray-500: #9a9a9a;
+  --gray-600: #818181;
+  --gray-700: #4f4e4e;
+  --gray-800: #353535;
+  --gray-900: #1c1b1b;
+}
+
+/* *** FONT DECLARATIONS *** */
+
+/* Prose (serif) font */
+
+@font-face {
+  font-family: Domine;
+  src: url('../public/static/fonts/Domine-Regular.ttf') format('opentype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Domine;
+  src: url('../public/static/fonts/Domine-Medium.ttf') format('opentype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Domine;
+  src: url('../public/static/fonts/Domine-SemiBold.ttf') format('opentype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Domine;
+  src: url('../public/static/fonts/Domine-Bold.ttf') format('opentype');
+  font-weight: 700;
+}
+
+/* Italic font */
+
+@font-face {
+  font-family: Edu;
+  src: url('../public/static/fonts/EduNSWACTFoundation-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+/* Global (sans) font */
+
+@font-face {
+  font-family: ITC Avant Garde Pro;
+  src: url('../public/static/fonts/ITCAvantGardePro-XLt.otf') format('opentype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: ITC Avant Garde Pro;
+  src: url('../public/static/fonts/ITCAvantGardePro-Bk.otf') format('opentype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: ITC Avant Garde Pro;
+  src: url('../public/static/fonts/ITCAvantGardePro-Md.otf') format('opentype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: ITC Avant Garde Pro;
+  src: url('../public/static/fonts/ITCAvantGardePro-Bold.otf') format('opentype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: ITC Avant Garde Pro;
+  src: url('../public/static/fonts/ITCAvantGardePro-Bold.otf') format('opentype');
+  font-weight: 800;
+}
+
+@layer base {
+  .prose a {
+    text-decoration: none;
+    font-weight: 600;
+    transition: ease 0.3s all;
+  }
+
+  .prose a:hover:not(.exclude-underline) {
+    text-decoration: underline !important;
+  }
+}
+
+/* Italic text */
+.prose em {
+  font-family: 'Edu', cursive;
+
+  font-size: 1.4rem;
+
+  color: var(--accent);
+
+  line-height: 100%;
+}
+
+.prose .no-style em {
+  font-family: serif !important;
+  color: inherit !important;
+  font-size: inherit !important;
+}
+/* 
+force line breaks for long links  */
+
+.prose a {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+/* *** FOOTNOTES *** */
+
+/* Size of footnotes at bottom */
+
+ol:has(li[id^='user-content-fn']) ::marker,
+li[id^='user-content-fn'] p {
+  font-size: 0.9rem !important;
+}
+
+/* Wrap footnote marker links in brackets */
+
+a[id^='user-content-fnref-']::before {
+  content: '[';
+}
+
+a[id^='user-content-fnref-']::after {
+  content: ']';
+}
+
+/* *** TYPOGRAPHY *** */
+
+/* CODE */
+
+/* hides backticks */
+
+.prose code::before,
+.prose code::after {
+  content: none !important;
+}
+
+.no-code-bg code {
+  background-color: transparent !important;
+}
+
+/* Custom bold */
+
+.bold-underline {
+  font-weight: 800;
+
+  font-size: 1.2rem;
+
+  color: var(--gray-900);
+
+  text-decoration: underline;
+
+  text-decoration-color: var(--tertiary);
+
+  text-decoration-thickness: 4px;
+
+  text-underline-offset: 3px;
+}
+
+.dark .bold-underline {
+  color: var(--gray-100);
+}
+
+/* tasks */
+
+.task-list-item::before {
+  @apply hidden;
+}
+
+.task-list-item {
+  @apply list-none;
+}
+
+.csl-entry {
+  @apply my-5;
+}
+
+/* https://stackoverflow.com/questions/61083813/how-to-avoid-internal-autofill-selected-style-to-be-applied */
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+/* Unordered list styles */
+
+ul {
+  list-style: none !important;
+
+  padding-left: 0;
+}
+
+/* All unordered lists in posts will be styled with arrows. Use `no-arrow` class to exclude UI elements */
+
+ul > li:not(.no-arrow) {
+  position: relative;
+
+  padding-left: 20px;
+
+  margin-bottom: 5px;
+}
+
+ul > li:not(.no-arrow)::before {
+  content: '\279C'; /* This is the unicode for the arrow symbol */
+
+  /* color: #2dd4bf !important; */
+
+  color: var(--secondary) !important;
+
+  position: absolute;
+
+  left: -10px;
+
+  top: 0;
+
+  color: inherit;
+}
+
+/* Ordered list headings */
+
+h2 .list-heading,
+h3 .list-heading,
+h4 .list-heading,
+h5 .list-heading {
+  position: relative;
+  padding-left: 35px;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+}
+
+h2 .list-heading::before,
+h3 .list-heading::before,
+h4 .list-heading::before,
+h5 .list-heading::before {
+  content: counter(h-counter);
+  counter-increment: h-counter;
+  position: absolute;
+  left: -5px;
+  top: 0.5px;
+  background: var(--secondary);
+  color: var(--gray-900);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+/* Optional: Reset the counter at the start of a new section or container */
+
+.section {
+  counter-reset: h-counter;
+}
+
+/* Summary/details */
+
+details[open] summary {
+  border-radius: 5px 5px 0 0 !important;
+
+  margin: 0;
+}
+
+details {
+  border-radius: 5px !important;
+}
+
+details > *:not(summary) {
+  font-size: 1rem;
+
+  padding: 1rem;
+
+  background-color: var(--gray-300);
+
+  border-radius: 0 0 5px 5px;
+
+  margin: 0;
+
+  color: var(--gray-900);
+}
+
+details summary {
+  font-size: 1.2rem;
+
+  font-weight: 600;
+
+  text-decoration: underline;
+
+  padding: 0.5rem;
+
+  border-radius: 5px !important;
+
+  list-style: none;
+
+  background-color: var(--gray-400);
+
+  color: var(--gray-900);
+
+  cursor: pointer;
+
+  margin: 0;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary::before {
+  content: '▶ ';
+
+  color: rgb(236, 172, 69);
+}
+
+details[open] summary::before {
+  content: '▼ ';
+
+  color: rgb(236, 172, 69);
+}
+
+details p {
+  margin-top: 0 !important;
+}
+
+/* Ordered List Styles */
+
+/* ol {
+
+list-style: none !important;
+
+counter-reset: list-counter;
+
+padding-left: 0;
+
+}
+
+  
+
+ol > li {
+
+counter-increment: list-counter;
+
+position: relative;
+
+margin-top: 10px;
+
+}
+
+  
+
+ol > li::before {
+
+content: counter(list-counter);
+
+position: absolute;
+
+left: -25px;
+
+top: 2px;
+
+background: rgb(236, 172, 69, 0.75);
+
+color: #181818;
+
+font-size: large;
+
+width: 25px;
+
+height: 25px;
+
+border-radius: 50%;
+
+text-align: center;
+
+line-height: 25px;
+
+font-weight: bold;
+
+}
+
+  
+
+ol > li ul li {
+
+margin-bottom: 5px;
+
+} */

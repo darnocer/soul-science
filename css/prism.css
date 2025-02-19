@@ -1,0 +1,119 @@
+/* Checkbox styling  */
+input[type='checkbox']:disabled {
+  background-color: transparent;
+  border: 1px solid #31cca8;
+  border-radius: 2px;
+}
+
+input[type='checkbox']:checked {
+  background-color: #31cca8;
+  transition: all 2ms ease-in;
+}
+
+input[type='checkbox']:checked:hover {
+  background-color: #31cca8;
+}
+/* 
+pre[class*='language-'],
+code[class*='language-'] {
+  color: #dddddd;
+  text-shadow: none;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+pre[class*='language-']::selection,
+code[class*='language-']::selection,
+pre[class*='language-']::mozselection,
+code[class*='language-']::mozselection {
+  text-shadow: none;
+  background: #14ff30;
+}
+
+@media print {
+  pre[class*='language-'],
+  code[class*='language-'] {
+    text-shadow: none;
+  }
+} */
+
+/* styles 'normal' code in codeblocks only (not inline) */
+pre[class*='language-'] > code[class*='language-'] {
+  color: #d0d0d0;
+}
+
+/*********************************************************
+* Tokens
+*/
+.namespace {
+  opacity: 0.7;
+}
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #777777;
+}
+.token.punctuation {
+  color: #e0e0e0;
+}
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #ff49b1;
+}
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #31cca8;
+}
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #999999;
+  background: #262626;
+}
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #ffd147;
+}
+.token.function {
+  color: #3ce3f9;
+}
+.token.regex,
+.token.important,
+.token.variable {
+  color: #1aa7ff;
+}
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+.token.italic {
+  font-style: italic;
+}
+.token.entity {
+  cursor: help;
+}

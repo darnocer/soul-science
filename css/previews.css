@@ -1,0 +1,33 @@
+.mdx-preview {
+  @apply prose-sm text-[50%] leading-relaxed text-gray-800 dark:text-gray-200 font-serif !important;
+}
+
+.mdx-preview h1,
+.mdx-preview h2,
+.mdx-preview h3 {
+  @apply font-semibold leading-tight;
+}
+
+.mdx-preview a {
+  @apply hover:underline;
+}
+
+.mdx-preview strong {
+  @apply font-semibold text-gray-50;
+}
+
+.mdx-preview em {
+  @apply italic;
+}
+
+.mdx-preview .callout {
+  font-size: 1rem;
+}
+
+.mdx-preview blockquote {
+  @apply text-gray-600 dark:text-gray-400;
+}
+
+.mdx-preview li {
+  @apply mt-8;
+}
