@@ -2,6 +2,7 @@ import React from 'react'
 
 const SectionContainer = ({ padding, container, children }) => {
   const paddingClassNames = {
+    xs: 'py-0',
     small: 'py-3',
     medium: 'py-5',
     large: 'py-7',

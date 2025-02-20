@@ -8,11 +8,11 @@ import Link from '@/components/links/Link'
 
 const NavigationBar = () => {
   return (
-    <header className='flex items-center justify-between py-6 px-6 md:px-0 m-auto w-full max-w-3xl'>
-      <Logo />
+    <header className='m-auto flex w-full max-w-5xl items-center justify-between px-6 py-6 md:px-0'>
+      <Logo size='small' type='full' />
 
       <nav className='flex items-center text-base leading-5'>
-        <div className='hidden sm:flex items-center'>
+        <div className='hidden items-center sm:flex'>
           {headerNavLinks.map((link) =>
             link.dropdown ? (
               <DropdownMenu key={link.title} title={link.title} links={link.dropdown} />
@@ -57,15 +57,15 @@ const DropdownMenu = ({ title, links }) => {
         </svg>
       </button>
       <div
-        className={`absolute top-full left-0 mt-0.5 w-60 bg-gray-100 dark:bg-gray-850 shadow-lg rounded-md transition-all duration-200 overflow-hidden ${
-          isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        className={`absolute left-0 top-full mt-0.5 w-60 overflow-hidden rounded-md bg-gray-100 shadow-lg transition-all duration-200 dark:bg-gray-850 ${
+          isOpen ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0'
         }`}
       >
         {links.map((dropdownLink) => (
           <Link
             key={dropdownLink.title}
             href={dropdownLink.href}
-            className='block p-4 font-semibold uppercase text-gray-700 duration-200 ease-in hover:bg-gray-150 dark:hover:bg-gray-800 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100'
+            className='block p-4 font-semibold uppercase text-gray-700 duration-200 ease-in hover:bg-gray-150 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-gray-100'
           >
             {dropdownLink.title}
           </Link>

@@ -5,7 +5,7 @@ import NavigationBar from '@/components/nav/NavigationBar'
 const LayoutWrapper = ({ children }) => {
   return (
     <>
-      <div className='align-start flex flex-col h-screen justify-start'>
+      <div className='align-start flex h-screen flex-col justify-start'>
         <NavigationBar />
         <main className='m-auto w-full max-w-5xl flex-grow px-6 lg:px-1'>{children}</main>
         <Footer />

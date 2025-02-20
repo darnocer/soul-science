@@ -7,10 +7,10 @@ export default function Heading({ text, level = 'h2', border = 'border', color =
     h1: ({ text }) => (
       <>
         {subtitle ? (
-          <span className='font-sans font-bold text-2xl text-gray-700 dark:text-gray-300 mb-4'>{subtitle}</span>
+          <span className='mb-4 font-sans text-2xl font-bold text-gray-700 dark:text-gray-300'>{subtitle}</span>
         ) : null}
         <h1
-          className={`text-5xl font-sans font-bold leading-none tracking-tighter text-gray-800 dark:text-gray-200 ${borderClasses}`}
+          className={`font-sans text-5xl font-bold leading-none tracking-tighter text-gray-800 dark:text-gray-200 ${borderClasses}`}
         >
           {text}
         </h1>
