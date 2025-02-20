@@ -10,6 +10,7 @@ layout:
   - PostSimple
 content_type: post
 image: test
+author: darian
 ---
 
 # Heading 1

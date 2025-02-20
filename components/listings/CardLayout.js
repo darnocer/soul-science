@@ -6,6 +6,7 @@ import Heading from '@/components/headings/Heading'
 import Button from '@/components/links/Button'
 import Link from '@/components/links/Link'
 import SearchIcon from '@/components/icons/ui/SearchIcon'
+import Author from '@/components/post/Author'
 
 const POSTS_PER_PAGE = 9
 
@@ -73,6 +74,11 @@ export default function CardLayout({ posts, heading, description }) {
                       </time>
                       <h3 className='mt-2 text-xl font-bold text-gray-900 dark:text-gray-200'>{title}</h3>
                       <p className='mt-2 flex-grow text-sm font-medium text-gray-700 dark:text-gray-400'>{summary}</p>
+                      {author && (
+                        <div className='mt-4'>
+                          <Author author={author} />
+                        </div>
+                      )}
                     </div>
                   </article>
                 </Link>
