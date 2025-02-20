@@ -34,7 +34,7 @@ const sharedTypographyStyles = {
         fontWeight: '800',
         color: colors.gray[800],
         fontSize: '3rem',
-        fontFamily: 'ITC Avant Garde Pro',
+        fontFamily: 'Plus Jakarta Sans',
       },
       h2: {
         fontWeight: '800',
@@ -42,31 +42,31 @@ const sharedTypographyStyles = {
         fontSize: '2.5rem',
         marginBottom: '0.5em',
         marginTop: '1em',
-        fontFamily: 'ITC Avant Garde Pro',
+        fontFamily: 'Plus Jakarta Sans',
       },
       h3: {
         fontWeight: '800',
         color: colors.gray[900],
         fontSize: '2rem',
-        fontFamily: 'ITC Avant Garde Pro',
+        fontFamily: 'Plus Jakarta Sans',
       },
       h4: {
         color: colors.gray[900],
         fontWeight: '800',
         fontSize: '1.5rem',
-        fontFamily: 'ITC Avant Garde Pro',
+        fontFamily: 'Plus Jakarta Sans',
       },
       h5: {
         color: colors.gray[900],
         fontSize: '1.25rem',
         fontWeight: '800',
-        fontFamily: 'ITC Avant Garde Pro',
+        fontFamily: 'Plus Jakarta Sans',
       },
       h6: {
         color: colors.gray[900],
         fontSize: '1rem',
         fontWeight: '800',
-        fontFamily: 'ITC Avant Garde Pro',
+        fontFamily: 'Plus Jakarta Sans',
       },
 
       // code
@@ -131,7 +131,7 @@ module.exports = {
         xxs: '.70rem',
       },
       fontFamily: {
-        sans: ['ITC Avant Garde Pro', ...defaultTheme.fontFamily.sans],
+        sans: ['Plus Jakarta Sans', ...defaultTheme.fontFamily.sans],
         serif: ['Domine', ...defaultTheme.fontFamily.serif],
       },
       fontWeight: {

@@ -20,6 +20,42 @@
 
 /* *** FONT DECLARATIONS *** */
 
+@font-face {
+  font-family: Plus Jakarta Sans;
+  src: url('../public/static/fonts/PlusJakartaSans-Light.ttf') format('opentype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Plus Jakarta Sans;
+  src: url('../public/static/fonts/PlusJakartaSans-Regular.ttf') format('opentype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Plus Jakarta Sans;
+  src: url('../public/static/fonts/PlusJakartaSans-Medium.ttf') format('opentype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Plus Jakarta Sans;
+  src: url('../public/static/fonts/PlusJakartaSans-SemiBold.ttf') format('opentype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Plus Jakarta Sans;
+  src: url('../public/static/fonts/PlusJakartaSans-Bold.ttf') format('opentype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Plus Jakarta Sans;
+  src: url('../public/static/fonts/PlusJakartaSans-ExtraBold.ttf') format('opentype');
+  font-weight: 800;
+}
+
 /* Prose (serif) font */
 
 @font-face {
