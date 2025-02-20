@@ -1,9 +1,9 @@
 const pathData = {
   root: 'content',
   blogContent: {
-    base: 'content',
+    base: 'blog',
     content: {
-      blog: 'blog',
+      blog: 'content',
     },
   },
   sectionContent: {

@@ -6,7 +6,7 @@ export default async function handler(req, res) {
 
     // console.log(`Fetching previews: maxLength=${maxLength}, contentType=${contentType}`)
 
-    const previews = await getMdxPreviews('content', 'blog', parseInt(maxLength), contentType)
+    const previews = await getMdxPreviews('blog', 'content', parseInt(maxLength), contentType)
 
     if (!previews || previews.length === 0) {
       console.log('No previews found.')

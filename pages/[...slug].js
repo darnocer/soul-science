@@ -2,7 +2,7 @@ import fs from 'fs'
 import PageTitle from '@/components/headings/PageTitle'
 import generateRss from '@/lib/generate-rss'
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
-import { formatSlug, getAllFilesFrontMatter, getFiles, getMdxContent } from '@/lib/mdx'
+import { formatSlug, getAllFilesFrontMatter, getFiles, getMdxContent, getSectionContent } from '@/lib/mdx'
 
 const DEFAULT_LAYOUT = 'PostSimple'
 
@@ -23,11 +23,11 @@ export async function getStaticProps({ params }) {
   const postIndex = allPosts.findIndex((post) => formatSlug(post.slug) === params.slug.join('/'))
   const prev = allPosts[postIndex + 1] || null
   const next = allPosts[postIndex - 1] || null
-  const post = await getMdxContent('content', 'blog', params.slug.join('/'))
+  const post = await getMdxContent(params.slug.join('/'))
   const authorList = post.frontMatter.authors || ['default']
   const authorPromise = authorList.map(async (author) => {
     // const authorResults = await getDataFile('authors', [author])
-    const authorResults = await getMdxContent('data', 'content', ['about'])
+    const authorResults = await getSectionContent('about')
     return authorResults.frontMatter
   })
   const authorDetails = await Promise.all(authorPromise)
