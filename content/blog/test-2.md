@@ -7,7 +7,7 @@ tags:
 date: 2025-02-19
 draft: false
 layout:
-  - PostSimple
+  - PostLayout
 content_type: post
 image: test
 author: darian
