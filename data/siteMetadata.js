@@ -32,7 +32,7 @@ const siteMetadata = {
     provider: 'convertkit',
   },
   comment: {
-    provider: null,
+    provider: '',
   },
 }
 
