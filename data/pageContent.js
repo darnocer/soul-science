@@ -1,10 +1,14 @@
 const pageContent = {
   newsletter: {
-    heading: 'Receive updates from me',
-    description: 'Subscribe for occasional emails about new posts',
-    error: '',
-    success: '',
-    button: '',
+    termsError: 'You must agree to the terms before subscribing.',
+    emailError: 'Oops. Your e-mail address is invalid or you are already subscribed!',
+    success: 'Success! 🎉 You are now subscribed.',
+    placeholder: 'Enter your email',
+    placeholderSubscribed: "You're subscribed! 🎉",
+    button: 'Sign Up',
+    buttonSubscribed: 'Thank you!',
+    consent: 'I agree to receive emails.',
+    disclaimer: '',
   },
   posts: {
     title: 'All Posts',

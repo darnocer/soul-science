@@ -1,18 +1,27 @@
 import { useRef, useState } from 'react'
-
 import siteMetadata from '@/data/siteMetadata'
+import SectionContainer from '@/components/layout/SectionContainer'
+import Button from '@/components/links/Button'
+
 import pageContent from '@/data/pageContent'
 
-import SectionContainer from '@/components/layout/SectionContainer'
+const content = pageContent.newsletter
 
-const NewsletterForm = ({ title = 'Stay in Touch', description }) => {
+const NewsletterForm = ({ title, description, disclaimer }) => {
   const inputEl = useRef(null)
   const [error, setError] = useState(false)
   const [message, setMessage] = useState('')
   const [subscribed, setSubscribed] = useState(false)
+  const [consent, setConsent] = useState(false)
 
   const subscribe = async (e) => {
     e.preventDefault()
+
+    if (!consent) {
+      setError(true)
+      setMessage(content.termsError)
+      return
+    }
 
     const res = await fetch(`/api/${siteMetadata.newsletter.provider}`, {
       body: JSON.stringify({
@@ -27,32 +36,32 @@ const NewsletterForm = ({ title = 'Stay in Touch', description }) => {
     const { error } = await res.json()
     if (error) {
       setError(true)
-      setMessage('Oops. Your e-mail address is invalid or you are already subscribed!')
+      setMessage(content.emailError)
       return
     }
 
     inputEl.current.value = ''
     setError(false)
     setSubscribed(true)
-    setMessage('Success! 🎉 You are now subscribed.')
+    setMessage(content.success)
   }
 
   return (
     <SectionContainer padding='small'>
-      <div className='border-t-2 border-gray-200 py-6 dark:border-gray-700'>
+      <div className='flex items-center justify-center'>
         <div className='justify-content flex flex-col items-start'>
-          <h3 className='text-md pb-1 font-semibold text-gray-800 dark:text-gray-200'>{title}</h3>
-          <p className='mt-2 mb-4 text-xs font-medium text-gray-400'>{description}</p>
+          {title ? <h3 className='pb-1 text-lg font-semibold text-gray-800 dark:text-gray-200'>{title}</h3> : null}
+          {description ? <p className='mb-4 mt-2 text-xs font-medium text-gray-400'>{description}</p> : null}
           <form className='flex max-w-md flex-col sm:flex-row' onSubmit={subscribe}>
             <div>
               <label htmlFor='email-input'>
                 <span className='sr-only'>Email address</span>
                 <input
                   autoComplete='email'
-                  className='w-72 rounded-md px-4 text-sm font-medium focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary-600 dark:bg-black'
+                  className='w-72 rounded-md px-4 text-sm font-medium focus:border-transparent focus:outline-none focus:ring-2 focus:ring-tertiary-600 dark:bg-black'
                   id='email-input'
                   name='email'
-                  placeholder={subscribed ? "You're subscribed !  🎉" : 'Enter your email'}
+                  placeholder={subscribed ? content.placeholderSubscribed : content.placeholder}
                   ref={inputEl}
                   required
                   type='email'
@@ -60,19 +69,36 @@ const NewsletterForm = ({ title = 'Stay in Touch', description }) => {
                 />
               </label>
             </div>
-            <div className='mt-2 flex w-full rounded-md shadow-sm sm:mt-0 sm:ml-3'>
+            <div className='mt-2 flex  rounded-md shadow-sm sm:ml-3 sm:mt-0'>
               <button
-                className={`w-full rounded-md bg-primary-500 py-4 px-6 text-sm font-semibold uppercase leading-none text-white transition-all duration-300 ease-in sm:py-0 ${
-                  subscribed ? 'cursor-default' : 'hover:bg-primary-700 dark:hover:bg-primary-400'
-                } focus:outline-none focus:ring-2 focus:ring-primary-600 focus:ring-offset-2 dark:ring-offset-black`}
+                className={`exclude-underline ease hover:pointer dark:bg-tertiary-800 dark:hover:bg-tertiary-700 mb-4 mr-6 inline-flex  items-center justify-center gap-2 rounded-md border border-tertiary-600 bg-tertiary-500 px-6 py-4 text-sm font-semibold uppercase text-white shadow-md transition-all duration-200 hover:border-tertiary-500 hover:bg-tertiary-400 hover:no-underline focus:outline-none focus:ring-2 focus:ring-tertiary-600 focus:ring-offset-2  dark:border-tertiary-600 dark:ring-offset-black dark:hover:border-tertiary-600 sm:mb-0 sm:py-0`}
                 type='submit'
                 disabled={subscribed}
               >
-                {subscribed ? 'Thank you!' : 'Sign up'}
+                {subscribed ? content.buttonSubscribed : content.button}
               </button>
             </div>
           </form>
-          {error && <div className='w-72 pt-2 text-sm text-accent-500 dark:text-accent-400 sm:w-96'>{message}</div>}
+
+          {!subscribed && (
+            <div className='mt-3 flex items-center space-x-2'>
+              <input
+                type='checkbox'
+                id='consent-checkbox'
+                checked={consent}
+                onChange={(e) => setConsent(e.target.checked)}
+                className='h-4 w-4 rounded border-gray-300 text-tertiary-600 focus:ring-tertiary-500 dark:border-gray-600 dark:bg-gray-800 dark:ring-offset-black'
+                required
+              />
+              <label htmlFor='consent-checkbox' className='text-xs font-medium text-gray-600 dark:text-gray-300'>
+                {content.consent}
+              </label>
+            </div>
+          )}
+
+          {disclaimer && <p className='mt-2 text-xs text-gray-500 dark:text-gray-400'>{disclaimer}</p>}
+
+          {error && <div className='w-72 pt-2 text-sm text-accent-500 dark:text-accent-500 sm:w-96'>{message}</div>}
         </div>
       </div>
     </SectionContainer>
@@ -81,10 +107,10 @@ const NewsletterForm = ({ title = 'Stay in Touch', description }) => {
 
 export default NewsletterForm
 
-export const BlogNewsletterForm = ({ title }) => (
+export const BlogNewsletterForm = ({ title, description, disclaimer }) => (
   <div className='flex items-center justify-center'>
-    <div className='bg-gray-100 p-6 dark:bg-gray-800 sm:px-14 sm:py-8'>
-      <NewsletterForm title={title} />
+    <div className='rounded-md bg-gray-100 p-6 dark:bg-gray-800 sm:px-14 sm:py-8'>
+      <NewsletterForm title={title} description={description} disclaimer={disclaimer} />
     </div>
   </div>
 )
