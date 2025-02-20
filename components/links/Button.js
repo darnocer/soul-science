@@ -1,33 +1,29 @@
 import React from 'react'
 import Link from '@/components/links/Link'
 
-import Download from '@/components/icons/buttons/download.svg'
-import Contact from '@/components/icons/buttons/paper-plane.svg'
-import Calendar from '@/components/icons/buttons/calendar.svg'
+const Button = ({ text, link, onClick, type = 'primary' }) => {
+  const commonClasses = `exclude-underline ease hover:pointer mb-4 mr-6 inline-flex items-center justify-center gap-2 rounded-md border px-6 py-3 shadow-md transition-all duration-200 hover:no-underline sm:mb-0`
 
-const ICONS = {
-  download: <Download />,
-  contact: <Contact />,
-  schedule: <Calendar />,
-}
+  const secondaryClasses = `bg-white border-gray-700 hover:border-gray-500 hover:bg-gray-100 dark:border-gray-300/30 dark:bg-black dark:hover:border-gray-400/40 dark:hover:bg-gray-850`
 
-const Button = ({ action, text, link }) => {
-  const IconComponent = action && ICONS[action]
+  const primaryClasses = `bg-tertiary-500 border-tertiary-600 text-white hover:border-tertiary-500 hover:bg-tertiary-400 dark:bg-tertiary-800 dark:border-tertiary-600 dark:hover:bg-tertiary-700 dark:hover:border-tertiary-600`
+
+  const buttonClasses = `${commonClasses} ${type === 'secondary' ? secondaryClasses : primaryClasses}`
+
+  const spanClasses = `mt-1 font-sans text-xs font-semibold uppercase`
+
+  if (link) {
+    return (
+      <Link href={link} className={buttonClasses}>
+        <span className={spanClasses}>{text}</span>
+      </Link>
+    )
+  }
 
   return (
-    <Link
-      href={link}
-      className='exclude-underline ease hover:pointer mb-4 sm:mb-0 mr-6 inline-flex items-center justify-center gap-2 rounded-md
-                 px-6 py-3 border 
-       border-gray-700 dark:border-gray-300/30
-                 bg-white dark:bg-black  
-                 text-sm font-semibold transition-all duration-200 hover:border-gray-500
-                 dark:hover:border-gray-400/40 hover:bg-gray-100
-                 dark:hover:bg-gray-850 shadow-lg hover:shadow-[0_0_10px_rgba(255,255,255,0.1)] hover:no-underline'
-    >
-      {IconComponent && <div className='text-base text-gray-800 dark:text-gray-100'>{IconComponent}</div>}
-      <span className='mt-1 text-sm font-sans uppercase font-semibold text-gray-800 dark:text-gray-100'>{text}</span>
-    </Link>
+    <button onClick={onClick} className={buttonClasses}>
+      <span className={spanClasses}>{text}</span>
+    </button>
   )
 }
 
