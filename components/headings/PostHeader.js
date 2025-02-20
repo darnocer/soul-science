@@ -9,7 +9,7 @@ export default function PostHeader({ title, summary, tags, date, contentType }) 
     <>
       <div className='flex flex-col gap-y-4 border-b border-gray-200 pb-8 text-center dark:border-gray-700'>
         <Breadcrumbs />
-        <div className='flex justify-center items-center gap-x-2'>
+        <div className='flex items-baseline justify-center gap-x-2'>
           {date ? (
             <dl>
               <div>

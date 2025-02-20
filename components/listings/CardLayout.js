@@ -39,7 +39,7 @@ export default function CardLayout({ posts, heading, description }) {
               type='text'
               onChange={(e) => setSearchValue(e.target.value)}
               placeholder='Search articles'
-              className='block w-full rounded-md border border-gray-300 bg-white px-4 py-2 font-medium text-gray-900 focus:border-tertiary-500 focus:ring-tertiary-500 dark:border-gray-900 dark:bg-gray-800 dark:text-gray-100'
+              className='block w-full rounded-md border border-gray-300 bg-white px-4 py-2 font-medium text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-900 dark:bg-gray-800 dark:text-gray-100'
             />
             <SearchIcon />
           </div>

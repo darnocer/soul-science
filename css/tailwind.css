@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --primary: #39b4c4;
+  --tertiary: #39b4c4;
   --secondary: #eab307;
-  --tertiary: #30a185;
+  --primary: #30a185;
   --accent: #b93f3f;
   --gray-100: #ffffff;
   --gray-200: #e6e6e6;
@@ -173,7 +173,7 @@ a[id^='user-content-fnref-']::after {
 
   text-decoration: underline;
 
-  text-decoration-color: var(--tertiary);
+  text-decoration-color: var(--primary);
 
   text-decoration-thickness: 4px;
 

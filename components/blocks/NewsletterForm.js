@@ -59,7 +59,7 @@ const NewsletterForm = ({ title, description, disclaimer }) => {
                 <span className='sr-only'>Email address</span>
                 <input
                   autoComplete='email'
-                  className='w-72 rounded-md px-4 text-sm font-medium focus:border-transparent focus:outline-none focus:ring-2 focus:ring-tertiary-600 dark:bg-black'
+                  className='w-72 rounded-md px-4 text-sm font-medium focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary-600 dark:bg-black'
                   id='email-input'
                   name='email'
                   placeholder={subscribed ? content.placeholderSubscribed : content.placeholder}
@@ -72,10 +72,10 @@ const NewsletterForm = ({ title, description, disclaimer }) => {
             </div>
             <div className='mt-2 flex rounded-md shadow-sm sm:ml-3 sm:mt-0'>
               <button
-                className={`exclude-underline ease hover:pointer  mb-4 mr-6 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md border   px-6 py-4 text-sm font-semibold uppercase  shadow-md transition-all duration-200 hover:no-underline focus:outline-none focus:ring-2 focus:ring-tertiary-600 focus:ring-offset-2  dark:ring-offset-black sm:mb-0 sm:py-0  ${
+                className={`exclude-underline ease hover:pointer  mb-4 mr-6 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md border   px-6 py-4 text-sm font-semibold uppercase  shadow-md transition-all duration-200 hover:no-underline focus:outline-none focus:ring-2 focus:ring-primary-600 focus:ring-offset-2  dark:ring-offset-black sm:mb-0 sm:py-0  ${
                   subscribed
                     ? 'cursor-not-allowed border-gray-600 bg-gray-600/60 text-gray-800 dark:border-gray-600 dark:text-white'
-                    : 'border-tertiary-600  bg-tertiary-500 text-white hover:border-tertiary-500  hover:bg-tertiary-400 dark:bg-tertiary-500 dark:text-white dark:hover:border-tertiary-600 dark:hover:bg-tertiary-600'
+                    : 'border-primary-600  bg-primary-500 text-white hover:border-primary-500  hover:bg-primary-400 dark:bg-primary-500 dark:text-white dark:hover:border-primary-600 dark:hover:bg-primary-600'
                 } `}
                 type='submit'
                 disabled={subscribed}
@@ -92,7 +92,7 @@ const NewsletterForm = ({ title, description, disclaimer }) => {
                 id='consent-checkbox'
                 checked={consent}
                 onChange={(e) => setConsent(e.target.checked)}
-                className='h-4 w-4 rounded border-gray-300 text-tertiary-600 focus:ring-tertiary-500 dark:border-gray-600 dark:bg-gray-800 dark:ring-offset-black'
+                className='h-4 w-4 rounded border-gray-300 text-primary-600 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-800 dark:ring-offset-black'
                 required
               />
               <label htmlFor='consent-checkbox' className='text-xs font-medium text-gray-600 dark:text-gray-300'>

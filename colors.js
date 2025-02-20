@@ -1,5 +1,5 @@
 module.exports = {
-  primary: {
+  tertiary: {
     300: '#55C3D0',
     400: '#40BCCA',
     500: '#39B4C4',
@@ -14,7 +14,7 @@ module.exports = {
     500: '#EAB307',
     600: '#CA8A04',
   },
-  tertiary: {
+  primary: {
     300: '#59B49D',
     400: '#45AA91',
     500: '#30A185',
