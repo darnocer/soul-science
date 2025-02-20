@@ -27,9 +27,9 @@ export default function App({ Component, pageProps }) {
       {isDevelopment && isSocket && <ClientReload />}
       <CustomAnalytics />
       <Analytics />
-      <LayoutWrapper>
-        <Component {...pageProps} />
-      </LayoutWrapper>
+      <div suppressHydrationWarning>
+        <LayoutWrapper>{typeof window === 'undefined' ? null : <Component {...pageProps} />}</LayoutWrapper>
+      </div>
     </ThemeProvider>
   )
 }
