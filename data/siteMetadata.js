@@ -1,17 +1,17 @@
 const siteMetadata = {
-  title: 'Darian Nocera',
+  title: 'Soul Science Wellness',
   author: 'Darian',
   description:
-    'Darian is a former project manager turned transformational wellness mentor specializing in spiritual healing, psychedelic journeys, and mindfulness & meditation.',
+    'Microdoses of wisdom for soul searchers and truth seekers. Subscribe for short insights on presence, healing, and self-discovery.',
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://www.dnocera.com',
-  siteRepo: 'https://github.com/darnocer/blog',
+  siteUrl: 'https://www.soul-science.com',
+  siteRepo: 'https://github.com/darnocer/soul-science',
   siteLogo: '/static/images/logos/logo.png',
-  image: '/static/images/avatar.png',
+  image: '/static/images/authors/darian.png',
   socialBanner: '/static/images/default-social-share.png',
   website: 'https://www.dnocera.com',
-  email: 'd@rootedvision.co',
+  email: 'darian@soul-science.com',
   github: 'https://github.com/darnocer',
   twitter: null,
   facebook: null,
