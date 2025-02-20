@@ -38,20 +38,6 @@ yarn-error.log*
 
 
 # content folders
-content/📝 Notes/
-content/⚙️ Meta/
-content/zArchive/
-content/⚙️ Templates/
-content/✏️ Drafts/
-content/.obsidian/
-content/static/
-content/📔 Book/
-content/draft/
-
-content/tips/tip-example.md
-
-content/blog/sample-blog.md
-
-/.obsidian/
-
-ABOUTME.md
+content/.obsidian
+content/drafts
+content/meta
