@@ -23,7 +23,8 @@ const Disqus = ({ frontMatter }) => {
       script.setAttribute('crossorigin', 'anonymous')
       script.async = true
       document.body.appendChild(script)
-    } else {
+    }
+    if (typeof window !== 'undefined' && window.DISQUS) {
       window.DISQUS.reset({ reload: true })
     }
   }

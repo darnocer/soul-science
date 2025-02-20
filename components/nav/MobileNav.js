@@ -11,7 +11,7 @@ const MobileNav = () => {
   const onToggleNav = () => {
     setNavShow((status) => {
       if (typeof document !== 'undefined') {
-        document.body.style.overflow = status ? 'auto' : 'hidden'
+        document.body.style.overflow = !status ? 'hidden' : 'auto'
       }
       return !status
     })

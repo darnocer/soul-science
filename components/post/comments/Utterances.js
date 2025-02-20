@@ -32,7 +32,9 @@ const Utterances = () => {
     return () => {
       if (typeof document !== 'undefined') {
         const comments = document.getElementById(COMMENTS_ID)
-        if (comments) comments.innerHTML = ''
+        if (comments && comments.hasChildNodes()) {
+          comments.innerHTML = ''
+        }
       }
     }
   }, [commentsTheme])
