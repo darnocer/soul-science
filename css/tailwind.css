@@ -90,38 +90,6 @@
   font-weight: 500;
 }
 
-/* Global (sans) font */
-
-@font-face {
-  font-family: ITC Avant Garde Pro;
-  src: url('../public/static/fonts/ITCAvantGardePro-XLt.otf') format('opentype');
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: ITC Avant Garde Pro;
-  src: url('../public/static/fonts/ITCAvantGardePro-Bk.otf') format('opentype');
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: ITC Avant Garde Pro;
-  src: url('../public/static/fonts/ITCAvantGardePro-Md.otf') format('opentype');
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: ITC Avant Garde Pro;
-  src: url('../public/static/fonts/ITCAvantGardePro-Bold.otf') format('opentype');
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: ITC Avant Garde Pro;
-  src: url('../public/static/fonts/ITCAvantGardePro-Bold.otf') format('opentype');
-  font-weight: 800;
-}
-
 @layer base {
   .prose a {
     text-decoration: none;
