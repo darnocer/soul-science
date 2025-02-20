@@ -50,8 +50,9 @@ const NewsletterForm = ({ title, description, disclaimer }) => {
     <SectionContainer padding='small'>
       <div className='flex items-center justify-center'>
         <div className='justify-content flex flex-col items-start'>
-          {title ? <h3 className='pb-1 text-lg font-semibold text-gray-800 dark:text-gray-200'>{title}</h3> : null}
-          {description ? <p className='mb-4 mt-2 text-xs font-medium text-gray-400'>{description}</p> : null}
+          {title && <h3 className='pb-1 text-lg font-semibold text-gray-800 dark:text-gray-200'>{title}</h3>}
+          {description && <p className='mb-4 mt-2 text-xs font-medium text-gray-400'>{description}</p>}
+
           <form className='flex max-w-md flex-col sm:flex-row' onSubmit={subscribe}>
             <div>
               <label htmlFor='email-input'>
@@ -69,13 +70,17 @@ const NewsletterForm = ({ title, description, disclaimer }) => {
                 />
               </label>
             </div>
-            <div className='mt-2 flex  rounded-md shadow-sm sm:ml-3 sm:mt-0'>
+            <div className='mt-2 flex rounded-md shadow-sm sm:ml-3 sm:mt-0'>
               <button
-                className={`exclude-underline ease hover:pointer dark:bg-tertiary-800 dark:hover:bg-tertiary-700 mb-4 mr-6 inline-flex items-center  justify-center gap-2 whitespace-nowrap rounded-md border border-tertiary-600 bg-tertiary-500 px-6 py-4 text-sm font-semibold uppercase text-white shadow-md transition-all duration-200 hover:border-tertiary-500 hover:bg-tertiary-400 hover:no-underline focus:outline-none focus:ring-2 focus:ring-tertiary-600 focus:ring-offset-2  dark:border-tertiary-600 dark:ring-offset-black dark:hover:border-tertiary-600 sm:mb-0 sm:py-0`}
+                className={`exclude-underline ease hover:pointer  mb-4 mr-6 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md border   px-6 py-4 text-sm font-semibold uppercase  shadow-md transition-all duration-200 hover:no-underline focus:outline-none focus:ring-2 focus:ring-tertiary-600 focus:ring-offset-2  dark:ring-offset-black sm:mb-0 sm:py-0  ${
+                  subscribed
+                    ? 'cursor-not-allowed border-gray-600 bg-gray-600/60 text-gray-800 dark:border-gray-600 dark:text-white'
+                    : 'border-tertiary-600  bg-tertiary-500 text-white hover:border-tertiary-500  hover:bg-tertiary-400 dark:bg-tertiary-500 dark:text-white dark:hover:border-tertiary-600 dark:hover:bg-tertiary-600'
+                } `}
                 type='submit'
                 disabled={subscribed}
               >
-                {subscribed ? content.buttonSubscribed : content.button}
+                {subscribed ? 'THANK YOU!' : content.button}
               </button>
             </div>
           </form>
@@ -99,6 +104,8 @@ const NewsletterForm = ({ title, description, disclaimer }) => {
           {disclaimer && <p className='mt-2 text-xs text-gray-500 dark:text-gray-400'>{disclaimer}</p>}
 
           {error && <div className='w-72 pt-2 text-sm text-accent-500 dark:text-accent-500 sm:w-96'>{message}</div>}
+
+          {subscribed && <p className='mt-3 text-sm font-medium text-green-600 dark:text-green-400'>{message}</p>}
         </div>
       </div>
     </SectionContainer>
