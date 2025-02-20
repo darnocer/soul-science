@@ -10,7 +10,7 @@ import Author from '@/components/post/Author'
 
 const POSTS_PER_PAGE = 9
 
-export default function CardLayout({ posts, heading, description }) {
+export default function CardLayout({ posts, heading, description, level = 'h2' }) {
   const [searchValue, setSearchValue] = useState('')
   const [visiblePosts, setVisiblePosts] = useState(POSTS_PER_PAGE)
 
@@ -29,7 +29,7 @@ export default function CardLayout({ posts, heading, description }) {
 
   return (
     <SectionContainer padding='xs' container='large'>
-      <Heading text={heading} level='h2' />
+      <Heading text={heading} level={level} />
       <div className='space-y-4'>
         <div className='mb-10 space-y-2 text-center'>
           <p className='font-medium text-gray-800 dark:text-gray-300'>{description}</p>
