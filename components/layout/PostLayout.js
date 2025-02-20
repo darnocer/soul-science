@@ -3,9 +3,11 @@ import { BlogSEO } from '@/components/seo/SEO'
 import siteMetadata from '@/data/siteMetadata'
 import Comments from '@/components/post/comments'
 import ScrollTopAndComment from '@/components/post/ScrollTopAndComment'
-import ScrollIndicator from '@/components/post/ScrollIndicator'
 import PostHeaderSimple from '@/components/headings/PostHeaderSimple'
 import BlogSidebar from '@/components/post/BlogSidebar'
+
+import dynamic from 'next/dynamic'
+const ScrollIndicator = dynamic(() => import('@/components/post/ScrollIndicator'), { ssr: false })
 
 const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`
 const discussUrl = (slug) =>
