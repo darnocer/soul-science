@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 
 const ScrollTopAndComment = () => {
   const [show, setShow] = useState(false)
+  const [scrollToComment, setScrollToComment] = useState(null) // Store the function in state
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -15,24 +16,27 @@ const ScrollTopAndComment = () => {
     }
   }, [])
 
+  useEffect(() => {
+    if (typeof document !== 'undefined') {
+      setScrollToComment(() => () => {
+        document.getElementById('comment')?.scrollIntoView()
+      })
+    }
+  }, [])
+
   const handleScrollTop = () => {
     if (typeof window !== 'undefined') {
       window.scrollTo({ top: 0 })
     }
   }
 
-  const handleScrollToComment = () => {
-    if (typeof document !== 'undefined') {
-      document.getElementById('comment')?.scrollIntoView()
-    }
-  }
   return (
     <div className={`fixed bottom-8 right-8 hidden flex-col gap-3 ${show ? 'md:flex' : 'md:hidden'}`}>
-      {siteMetadata.comment.provider && (
+      {siteMetadata.comment.provider && scrollToComment && (
         <button
           aria-label='Scroll To Comment'
           type='button'
-          onClick={handleScrollToComment}
+          onClick={scrollToComment}
           className='rounded-full bg-gray-200 p-2 text-gray-500 transition-all hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-400 dark:hover:bg-gray-600'
         >
           <svg className='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'>

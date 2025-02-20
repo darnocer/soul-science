@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Link from '@/components/links/Link'
 import headerNavLinks from '@/data/nav/headerNavLinks'
 
@@ -8,13 +8,15 @@ const MobileNav = () => {
     Object.fromEntries(headerNavLinks.map((link) => [link.title, true])) // Default all dropdowns to open
   )
 
+  // Ensure `document.body.style.overflow` is updated only on the client
+  useEffect(() => {
+    if (typeof document !== 'undefined') {
+      document.body.style.overflow = navShow ? 'hidden' : 'auto'
+    }
+  }, [navShow]) // Runs whenever `navShow` changes
+
   const onToggleNav = () => {
-    setNavShow((status) => {
-      if (typeof document !== 'undefined') {
-        document.body.style.overflow = !status ? 'hidden' : 'auto'
-      }
-      return !status
-    })
+    setNavShow((status) => !status) // Just toggle state, effect will handle `document.body`
   }
 
   const toggleDropdown = (title) => {
