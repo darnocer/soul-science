@@ -17,12 +17,14 @@ const Disqus = ({ frontMatter }) => {
       }
     }
     if (typeof window !== 'undefined' && window.DISQUS === undefined) {
-      const script = document.createElement('script')
-      script.src = 'https://' + siteMetadata.comment.disqusConfig.shortname + '.disqus.com/embed.js'
-      script.setAttribute('data-timestamp', +new Date())
-      script.setAttribute('crossorigin', 'anonymous')
-      script.async = true
-      document.body.appendChild(script)
+      if (typeof document !== 'undefined') {
+        const script = document.createElement('script')
+        script.src = 'https://' + siteMetadata.comment.disqusConfig.shortname + '.disqus.com/embed.js'
+        script.setAttribute('data-timestamp', +new Date())
+        script.setAttribute('crossorigin', 'anonymous')
+        script.async = true
+        document.body.appendChild(script)
+      }
     }
     if (typeof window !== 'undefined' && window.DISQUS) {
       window.DISQUS.reset({ reload: true })
