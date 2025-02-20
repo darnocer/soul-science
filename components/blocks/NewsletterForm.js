@@ -71,7 +71,7 @@ const NewsletterForm = ({ title, description, disclaimer }) => {
             </div>
             <div className='mt-2 flex  rounded-md shadow-sm sm:ml-3 sm:mt-0'>
               <button
-                className={`exclude-underline ease hover:pointer dark:bg-tertiary-800 dark:hover:bg-tertiary-700 mb-4 mr-6 inline-flex  items-center justify-center gap-2 rounded-md border border-tertiary-600 bg-tertiary-500 px-6 py-4 text-sm font-semibold uppercase text-white shadow-md transition-all duration-200 hover:border-tertiary-500 hover:bg-tertiary-400 hover:no-underline focus:outline-none focus:ring-2 focus:ring-tertiary-600 focus:ring-offset-2  dark:border-tertiary-600 dark:ring-offset-black dark:hover:border-tertiary-600 sm:mb-0 sm:py-0`}
+                className={`exclude-underline ease hover:pointer dark:bg-tertiary-800 dark:hover:bg-tertiary-700 mb-4 mr-6 inline-flex items-center  justify-center gap-2 whitespace-nowrap rounded-md border border-tertiary-600 bg-tertiary-500 px-6 py-4 text-sm font-semibold uppercase text-white shadow-md transition-all duration-200 hover:border-tertiary-500 hover:bg-tertiary-400 hover:no-underline focus:outline-none focus:ring-2 focus:ring-tertiary-600 focus:ring-offset-2  dark:border-tertiary-600 dark:ring-offset-black dark:hover:border-tertiary-600 sm:mb-0 sm:py-0`}
                 type='submit'
                 disabled={subscribed}
               >
