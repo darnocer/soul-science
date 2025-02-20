@@ -7,8 +7,7 @@ const ScrollIndicator = ({ direction = 'top' }) => {
   useEffect(() => {
     const updateScrollPercentage = () => {
       const scrollPosition = window.scrollY
-      const documentHeight =
-        document.documentElement.scrollHeight - document.documentElement.clientHeight
+      const documentHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
       const scrollPercent = (scrollPosition / documentHeight) * 100
       setScrollPercentage(scrollPercent)
     }
@@ -18,15 +17,13 @@ const ScrollIndicator = ({ direction = 'top' }) => {
   }, [])
 
   const THICKNESS = '10px'
-  const COLORS = 'from-primary-700 to-tertiary-300'
+  const COLORS = 'from-tertiary-300 to-primary-700'
 
   const isHorizontal = direction === 'top'
 
   return (
     <div
-      className={`fixed z-50 transition-all ${
-        isHorizontal ? 'bg-gradient-to-r' : 'bg-gradient-to-b'
-      } ${COLORS}`}
+      className={`fixed z-50 transition-all ${isHorizontal ? 'bg-gradient-to-r' : 'bg-gradient-to-b'} ${COLORS}`}
       style={{
         top: 0,
         left: 0,
