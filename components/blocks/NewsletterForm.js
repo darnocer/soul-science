@@ -1,7 +1,8 @@
 import { useRef, useState } from 'react'
+import Lottie from 'lottie-react'
+import confettiAnimation from '@/data/lottie/confetti.json'
 import siteMetadata from '@/data/siteMetadata'
 import SectionContainer from '@/components/layout/SectionContainer'
-import Button from '@/components/links/Button'
 
 import pageContent from '@/data/pageContent'
 
@@ -16,12 +17,6 @@ const NewsletterForm = ({ title, description, disclaimer }) => {
 
   const subscribe = async (e) => {
     e.preventDefault()
-
-    if (!consent) {
-      setError(true)
-      setMessage(content.termsError)
-      return
-    }
 
     const res = await fetch(`/api/${siteMetadata.newsletter.provider}`, {
       body: JSON.stringify({
@@ -48,7 +43,13 @@ const NewsletterForm = ({ title, description, disclaimer }) => {
 
   return (
     <SectionContainer padding='small'>
-      <div className='flex items-center justify-center'>
+      <div className='relative flex items-center justify-center'>
+        {subscribed && (
+          <div className='absolute left-[75%] top-[50%] w-64 -translate-x-1/2 -translate-y-1/2'>
+            <Lottie animationData={confettiAnimation} autoplay loop={false} />
+          </div>
+        )}
+
         <div className='justify-content flex flex-col items-start'>
           {title && <h3 className='pb-1 text-lg font-semibold text-gray-800 dark:text-gray-200'>{title}</h3>}
           {description && <p className='mb-4 mt-2 text-xs font-medium text-gray-400'>{description}</p>}
@@ -90,7 +91,6 @@ const NewsletterForm = ({ title, description, disclaimer }) => {
               <input
                 type='checkbox'
                 id='consent-checkbox'
-                checked={consent}
                 onChange={(e) => setConsent(e.target.checked)}
                 className='h-4 w-4 rounded border-gray-300 text-primary-600 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-800 dark:ring-offset-black'
                 required
