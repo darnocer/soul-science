@@ -28,11 +28,11 @@ export default function CardLayout({ posts, heading, description, level = 'h2' }
   const displayPosts = filteredPosts.slice(0, visiblePosts)
 
   return (
-    <SectionContainer padding='xs' container='large'>
+    <SectionContainer padding='medium' container='large'>
       <Heading text={heading} level={level} />
+      {/* <p className='font-medium text-gray-800 dark:text-gray-300'>{description}</p> */}
       <div className='space-y-4'>
         <div className='mb-10 space-y-2 text-center'>
-          <p className='font-medium text-gray-800 dark:text-gray-300'>{description}</p>
           <div className='relative max-w-lg'>
             <input
               aria-label='Search articles'

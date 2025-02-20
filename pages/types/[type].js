@@ -1,6 +1,6 @@
 import { TagSEO } from '@/components/seo/SEO'
 import siteMetadata from '@/data/siteMetadata'
-import ListLayout from '@/components/listings/ListLayout'
+import CardLayout from '@/components/listings/CardLayout'
 import generateRss from '@/lib/generate-rss'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import { getAllTypes } from '@/lib/getAllTypes'
@@ -60,7 +60,7 @@ export default function Type({ posts, type }) {
   return (
     <>
       <TagSEO title={`${title} Posts`} description={`${title} tags | ${siteMetadata.author}`} />
-      <ListLayout posts={posts} title={title} />
+      <CardLayout posts={posts} heading={title} level='h1' />
     </>
   )
 }

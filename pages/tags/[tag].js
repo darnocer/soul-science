@@ -1,6 +1,6 @@
 import { TagSEO } from '@/components/seo/SEO'
 import siteMetadata from '@/data/siteMetadata'
-import ListLayout from '@/components/listings/ListLayout'
+import CardLayout from '@/components/listings/CardLayout'
 import generateRss from '@/lib/generate-rss'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import { getAllTags } from '@/lib/getAllTags'
@@ -44,13 +44,13 @@ export async function getStaticProps({ params }) {
 
 export default function Tag({ posts, tag }) {
   // Capitalize first letter and convert space to dash
-  const title = tag[0].toUpperCase() + tag.split(' ').join('-').slice(1)
+  const title = '#' + tag[0].toUpperCase() + tag.split(' ').join('-').slice(1)
   const description = pageContent.tag.description(tag)
 
   return (
     <>
       <TagSEO title={`${title} Posts`} description={`${title} tags | ${siteMetadata.author}`} />
-      <ListLayout posts={posts} title={title} description={description} />
+      <CardLayout posts={posts} heading={title} level='h1' description={description} />
     </>
   )
 }
