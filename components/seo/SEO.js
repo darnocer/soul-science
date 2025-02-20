@@ -7,16 +7,18 @@ const CommonSEO = ({ title, description, ogType, canonicalUrl, metaImage }) => {
   const ogImage = metaImage || `${siteMetadata.siteUrl}${siteMetadata.socialBanner}`
   const twImage = ogImage
 
+  const metaTitle = title && title !== 'no-title' ? `${title} | ${siteMetadata.title}` : siteMetadata.title
+
   return (
     <Head>
-      <title>{title ? `${title} | ${siteMetadata.title}` : `${siteMetadata.title}`}</title>
+      <title>{metaTitle}</title>
       <meta name='robots' content='follow, index' />
       <meta name='description' content={description} />
       <meta property='og:url' content={`${siteMetadata.siteUrl}${router.asPath}`} />
       <meta property='og:type' content={ogType} />
       <meta property='og:site_name' content={siteMetadata.title} />
       <meta property='og:description' content={description} />
-      <meta property='og:title' content={title} />
+      <meta property='og:title' content={metaTitle} />
       {ogImage.constructor.name === 'Array' ? (
         ogImage.map(({ url }) => <meta property='og:image' content={url} key={url} />)
       ) : (
@@ -24,7 +26,7 @@ const CommonSEO = ({ title, description, ogType, canonicalUrl, metaImage }) => {
       )}
       <meta name='twitter:card' content='summary_large_image' />
       <meta name='twitter:site' content={siteMetadata.twitter} />
-      <meta name='twitter:title' content={title} />
+      <meta name='twitter:title' content={metaTitle} />
       <meta name='twitter:description' content={description} />
       <meta name='twitter:image' content={twImage} />
       <link rel='canonical' href={canonicalUrl ? canonicalUrl : `${siteMetadata.siteUrl}${router.asPath}`} />
