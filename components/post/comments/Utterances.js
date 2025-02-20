@@ -24,27 +24,33 @@ const Utterances = () => {
     script.setAttribute('crossorigin', 'anonymous')
     script.async = true
 
-    const comments = document.getElementById(COMMENTS_ID)
-    if (comments) comments.appendChild(script)
+    if (typeof document !== 'undefined') {
+      const comments = document.getElementById(COMMENTS_ID)
+      if (comments) comments.appendChild(script)
+    }
 
     return () => {
-      const comments = document.getElementById(COMMENTS_ID)
-      if (comments) comments.innerHTML = ''
+      if (typeof document !== 'undefined') {
+        const comments = document.getElementById(COMMENTS_ID)
+        if (comments) comments.innerHTML = ''
+      }
     }
   }, [commentsTheme])
 
   // Reload on theme change
   useEffect(() => {
-    const iframe = document.querySelector('iframe.utterances-frame')
-    if (!iframe) return
-    LoadComments()
+    if (typeof document !== 'undefined') {
+      const iframe = document.querySelector('iframe.utterances-frame')
+      if (!iframe) return
+      LoadComments()
+    }
   }, [LoadComments])
 
   // Added `relative` to fix a weird bug with `utterances-frame` position
   return (
-    <div className="pt-6 pb-6 text-center text-gray-700 dark:text-gray-300">
+    <div className='pb-6 pt-6 text-center text-gray-700 dark:text-gray-300'>
       {enableLoadComments && <button onClick={LoadComments}>Load Comments</button>}
-      <div className="utterances-frame relative" id={COMMENTS_ID} />
+      <div className='utterances-frame relative' id={COMMENTS_ID} />
     </div>
   )
 }

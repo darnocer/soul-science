@@ -5,15 +5,17 @@ const ScrollIndicator = ({ direction = 'top' }) => {
   const [scrollPercentage, setScrollPercentage] = useState(0)
 
   useEffect(() => {
-    const updateScrollPercentage = () => {
-      const scrollPosition = window.scrollY
-      const documentHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
-      const scrollPercent = (scrollPosition / documentHeight) * 100
-      setScrollPercentage(scrollPercent)
-    }
+    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+      const updateScrollPercentage = () => {
+        const scrollPosition = window.scrollY
+        const documentHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
+        const scrollPercent = (scrollPosition / documentHeight) * 100
+        setScrollPercentage(scrollPercent)
+      }
 
-    window.addEventListener('scroll', updateScrollPercentage)
-    return () => window.removeEventListener('scroll', updateScrollPercentage)
+      window.addEventListener('scroll', updateScrollPercentage)
+      return () => window.removeEventListener('scroll', updateScrollPercentage)
+    }
   }, [])
 
   const THICKNESS = '10px'

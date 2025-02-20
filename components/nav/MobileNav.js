@@ -10,7 +10,9 @@ const MobileNav = () => {
 
   const onToggleNav = () => {
     setNavShow((status) => {
-      document.body.style.overflow = status ? 'auto' : 'hidden'
+      if (typeof document !== 'undefined') {
+        document.body.style.overflow = status ? 'auto' : 'hidden'
+      }
       return !status
     })
   }
@@ -36,7 +38,7 @@ const MobileNav = () => {
         </svg>
       </button>
       <div
-        className={`fixed top-0 left-0 z-10 h-full w-full transform bg-gray-200 opacity-95 duration-300 ease-in-out dark:bg-gray-900 ${
+        className={`fixed left-0 top-0 z-10 h-full w-full transform bg-gray-200 opacity-95 duration-300 ease-in-out dark:bg-gray-900 ${
           navShow ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -62,7 +64,7 @@ const MobileNav = () => {
               {link.dropdown ? (
                 <>
                   <button
-                    className='flex items-center justify-between w-full text-3xl font-bold tracking-widest text-gray-900 dark:text-gray-100'
+                    className='flex w-full items-center justify-between text-3xl font-bold tracking-widest text-gray-900 dark:text-gray-100'
                     onClick={() => toggleDropdown(link.title)}
                   >
                     <span>{link.title}</span>

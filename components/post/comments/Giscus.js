@@ -18,17 +18,8 @@ const Giscus = () => {
   const LoadComments = useCallback(() => {
     setEnabledLoadComments(false)
 
-    const {
-      repo,
-      repositoryId,
-      category,
-      categoryId,
-      mapping,
-      reactions,
-      metadata,
-      inputPosition,
-      lang,
-    } = siteMetadata?.comment?.giscusConfig
+    const { repo, repositoryId, category, categoryId, mapping, reactions, metadata, inputPosition, lang } =
+      siteMetadata?.comment?.giscusConfig
 
     const script = document.createElement('script')
     script.src = 'https://giscus.app/client.js'
@@ -45,26 +36,32 @@ const Giscus = () => {
     script.setAttribute('crossorigin', 'anonymous')
     script.async = true
 
-    const comments = document.getElementById(COMMENTS_ID)
-    if (comments) comments.appendChild(script)
+    if (typeof document !== 'undefined') {
+      const comments = document.getElementById(COMMENTS_ID)
+      if (comments) comments.appendChild(script)
+    }
 
     return () => {
-      const comments = document.getElementById(COMMENTS_ID)
-      if (comments) comments.innerHTML = ''
+      if (typeof document !== 'undefined') {
+        const comments = document.getElementById(COMMENTS_ID)
+        if (comments) comments.innerHTML = ''
+      }
     }
   }, [commentsTheme])
 
   // Reload on theme change
   useEffect(() => {
-    const iframe = document.querySelector('iframe.giscus-frame')
-    if (!iframe) return
-    LoadComments()
+    if (typeof document !== 'undefined') {
+      const iframe = document.querySelector('iframe.giscus-frame')
+      if (!iframe) return
+      LoadComments()
+    }
   }, [LoadComments])
 
   return (
-    <div className="pt-6 pb-6 text-center text-gray-700 dark:text-gray-300">
+    <div className='pb-6 pt-6 text-center text-gray-700 dark:text-gray-300'>
       {enableLoadComments && <button onClick={LoadComments}>Load Comments</button>}
-      <div className="giscus" id={COMMENTS_ID} />
+      <div className='giscus' id={COMMENTS_ID} />
     </div>
   )
 }

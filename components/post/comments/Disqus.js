@@ -10,11 +10,13 @@ const Disqus = ({ frontMatter }) => {
   function LoadComments() {
     setEnabledLoadComments(false)
 
-    window.disqus_config = function () {
-      this.page.url = window.location.href
-      this.page.identifier = frontMatter.slug
+    if (typeof window !== 'undefined') {
+      window.disqus_config = function () {
+        this.page.url = window.location.href
+        this.page.identifier = frontMatter.slug
+      }
     }
-    if (window.DISQUS === undefined) {
+    if (typeof window !== 'undefined' && window.DISQUS === undefined) {
       const script = document.createElement('script')
       script.src = 'https://' + siteMetadata.comment.disqusConfig.shortname + '.disqus.com/embed.js'
       script.setAttribute('data-timestamp', +new Date())
@@ -27,9 +29,9 @@ const Disqus = ({ frontMatter }) => {
   }
 
   return (
-    <div className="pt-6 pb-6 text-center text-gray-700 dark:text-gray-300">
+    <div className='pb-6 pt-6 text-center text-gray-700 dark:text-gray-300'>
       {enableLoadComments && <button onClick={LoadComments}>Load Comments</button>}
-      <div className="disqus-frame" id={COMMENTS_ID} />
+      <div className='disqus-frame' id={COMMENTS_ID} />
     </div>
   )
 }
