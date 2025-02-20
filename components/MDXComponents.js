@@ -11,7 +11,7 @@ import CodeContainer from '@/components/layout/CodeContainer'
 import Callout from '@/components/blocks/Callout'
 import Heading from '@/components/headings/Heading'
 import DefinitionCallout from '@/components/blocks/DefinitionCallout'
-import Button from '@/components/links/Button'
+import CtaButton from '@/components/links/CtaButton'
 import Status from '@/components/blocks/Status'
 import Testimonial from '@/components/blocks/Testimonial'
 import CardGrid from '@/components/blocks/CardGrid'
@@ -26,7 +26,7 @@ export const MDXComponents = {
   Callout,
   Heading,
   DefinitionCallout,
-  Button,
+  CtaButton,
   Status,
   CardGrid,
   Testimonial,
