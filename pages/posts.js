@@ -3,7 +3,7 @@ import MetadataWrapper from '@/components/seo/MetadataWrapper'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import pageContent from '@/data/pageContent'
 
-import ListLayout from '@/components/listings/ListLayout'
+import CardLayout from '@/components/listings/CardLayout'
 
 export const POSTS_PER_PAGE = 10
 const PAGE_TITLE = 'Posts'
@@ -22,11 +22,12 @@ export async function getStaticProps() {
 export default function Blog({ posts, initialDisplayPosts, pagination }) {
   return (
     <MetadataWrapper title={PAGE_TITLE}>
-      <ListLayout
+      <CardLayout
         posts={posts}
         initialDisplayPosts={initialDisplayPosts}
         pagination={pagination}
-        title={pageContent.posts.title}
+        heading={pageContent.posts.title}
+        level='h1'
         description={pageContent.posts.description}
       />
     </MetadataWrapper>
