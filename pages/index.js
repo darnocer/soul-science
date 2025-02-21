@@ -24,13 +24,13 @@ export default function Home({ posts, homeContent }) {
     <MetadataWrapper>
       {typeof window !== 'undefined' && (
         <>
-          {/* <Hero
+          <Hero
             heading='Soul Signals'
-            subtitle='Microdoses of wisdom for soul searchers and truth seekers.'
-            description='Subscribe for short insights on presence, healing, and self-discovery.'
+            subtitle='Lorem ipsum'
+            description='Lorem ipsum'
             disclaimer='this is a disclaimer'
           />
-          <CardLayout posts={posts} heading='All Posts' /> */}
+          <CardLayout posts={posts} heading='All Posts' />
         </>
       )}
     </MetadataWrapper>

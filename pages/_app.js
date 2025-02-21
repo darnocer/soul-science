@@ -19,8 +19,8 @@ import { ClientReload } from '@/components/ClientReload'
 
 import { Analytics } from '@vercel/analytics/react'
 
-// const isDevelopment = process.env.NODE_ENV === 'development'
-// const isSocket = process.env.SOCKET
+const isDevelopment = process.env.NODE_ENV === 'development'
+const isSocket = process.env.SOCKET
 
 export default function App({ Component, pageProps }) {
   const [mounted, setMounted] = useState(false)
@@ -32,17 +32,14 @@ export default function App({ Component, pageProps }) {
   if (!mounted) return null
 
   return (
-    <>
-      <Component {...pageProps} />
-    </>
-    // <ThemeProvider attribute='class' defaultTheme={siteMetadata.theme}>
-    //   <Head>
-    //     <meta content='width=device-width, initial-scale=1' name='viewport' />
-    //   </Head>
-    //   {isDevelopment && isSocket && <ClientReload />}
-    //   <CustomAnalytics />
-    //   <Analytics />
-    //   <LayoutWrapper>{typeof window !== 'undefined' && <Component {...pageProps} />}</LayoutWrapper>
-    // </ThemeProvider>
+    <ThemeProvider attribute='class' defaultTheme={siteMetadata.theme}>
+      <Head>
+        <meta content='width=device-width, initial-scale=1' name='viewport' />
+      </Head>
+      {isDevelopment && isSocket && <ClientReload />}
+      <CustomAnalytics />
+      <Analytics />
+      <LayoutWrapper>{typeof window !== 'undefined' && <Component {...pageProps} />}</LayoutWrapper>
+    </ThemeProvider>
   )
 }
