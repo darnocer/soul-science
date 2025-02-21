@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 
-import MobileNav from '@/components/nav/MobileNav'
 import ThemeSwitch from '@/components/nav/ThemeSwitch'
 import headerNavLinks from '@/data/nav/headerNavLinks'
 import Logo from '@/components/nav/Logo'
 import Link from '@/components/links/Link'
+
+import dynamic from 'next/dynamic'
+const MobileNav = dynamic(() => import('@/components/MobileNav'), { ssr: false })
 
 const NavigationBar = () => {
   return (

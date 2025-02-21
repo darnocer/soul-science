@@ -7,12 +7,13 @@ import { useRouter } from 'next/router'
 import LinkArrow from '@/components/links/LinkArrow'
 import PostHeader from '@/components/headings/PostHeader'
 
-import ScrollIndicator from '@/components/post/ScrollIndicator'
-
 import { useEffect } from 'react'
 
 import Prism from 'prismjs'
 import '../../lib/prism/dataview'
+
+import dynamic from 'next/dynamic'
+const ScrollIndicator = dynamic(() => import('@/components/ScrollIndicator'), { ssr: false })
 
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {
   const { date, title, tags, summary, content_type } = frontMatter
