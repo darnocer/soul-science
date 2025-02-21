@@ -1,3 +1,5 @@
+'use client'
+
 import SectionContainer from '@/components/layout/SectionContainer'
 import { BlogSEO } from '@/components/seo/SEO'
 import siteMetadata from '@/data/siteMetadata'

@@ -1,3 +1,5 @@
+'use client'
+
 import { useRef, useState } from 'react'
 import Lottie from 'lottie-react'
 import confettiAnimation from '@/data/lottie/confetti.json'

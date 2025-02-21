@@ -1,3 +1,5 @@
+'use client'
+
 import { useEffect, useState } from 'react'
 import { MDXRemote } from 'next-mdx-remote'
 import formatDateShort from '@/lib/utils/formatDateShort'
@@ -39,7 +41,7 @@ export default function RecentSnippets({ heading, numPosts = MAX_SNIPPETS }) {
           {snippets.map(({ frontMatter, mdxSource, isTruncated }) => {
             const { slug, date, title, tags, content_type } = frontMatter
             return (
-              <li key={slug} className='group no-arrow py-2'>
+              <li key={slug} className='no-arrow group py-2'>
                 <article className='flex flex-col gap-2'>
                   <div className='flex items-center gap-x-2'>
                     {/* {date && (
@@ -54,7 +56,7 @@ export default function RecentSnippets({ heading, numPosts = MAX_SNIPPETS }) {
                     {content_type && <Badge text={content_type} />} */}
                     {/* <span className='text-gray-700 dark:text-gray-400'>|</span> */}
                     {tags && (
-                      <div className='flex items-baseline gap-x-2 my-2'>
+                      <div className='my-2 flex items-baseline gap-x-2'>
                         {tags.map((tag) => (
                           <Tag key={tag} text={tag} />
                         ))}

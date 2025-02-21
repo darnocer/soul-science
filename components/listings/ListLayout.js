@@ -1,3 +1,5 @@
+'use client'
+
 import { useState } from 'react'
 
 import formatDate from '@/lib/utils/formatDate'
@@ -30,7 +32,7 @@ export default function ListLayout({ posts, title, description, initialDisplayPo
     <>
       <SectionContainer container='small'>
         <div className='divide-y divide-gray-200 dark:divide-gray-700'>
-          <div className='space-y-2 pt-6 pb-8 md:space-y-5'>
+          <div className='space-y-2 pb-8 pt-6 md:space-y-5'>
             <PageTitle>{title}</PageTitle>
             <p className='font-medium text-gray-800 dark:text-gray-300'>{description ? description : null}</p>
             <div className='relative max-w-lg'>
@@ -59,16 +61,16 @@ export default function ListLayout({ posts, title, description, initialDisplayPo
           </div>
           <ul className='divide-y divide-gray-200 dark:divide-gray-700'>
             {!filteredBlogPosts.length && (
-              <span className='mt-6 font-semibold dark:text-gray-400 text-gray-600'>No posts found.</span>
+              <span className='mt-6 font-semibold text-gray-600 dark:text-gray-400'>No posts found.</span>
             )}
             {displayPosts.map((frontMatter) => {
               const { slug, date, title, summary, tags, type, content_type } = frontMatter
               return (
-                <li key={slug} className='group no-arrow py-2'>
+                <li key={slug} className='no-arrow group py-2'>
                   <article className='space-y-1'>
                     <Link
                       href={`/${slug}`}
-                      className='text-gray-900 transition-all duration-300 group-hover:border-l-4 group-hover:border-accent-300 group-hover:pl-4 dark:text-gray-200 dark:group-hover:border-accent-400 flex flex-col'
+                      className='flex flex-col text-gray-900 transition-all duration-300 group-hover:border-l-4 group-hover:border-accent-300 group-hover:pl-4 dark:text-gray-200 dark:group-hover:border-accent-400'
                     >
                       <div className='space-y-0.5 pt-4 xl:col-span-3'>
                         <div className='flex items-center gap-x-2'>
@@ -84,7 +86,7 @@ export default function ListLayout({ posts, title, description, initialDisplayPo
                           {content_type && <Badge text={content_type} />}
                         </div>
 
-                        <div className='flex items-center gap-x-2 pt-1 pb-2'>
+                        <div className='flex items-center gap-x-2 pb-2 pt-1'>
                           <h3 className='break-words pt-2 text-3xl font-bold tracking-tight hover:underline'>
                             {title}
                           </h3>

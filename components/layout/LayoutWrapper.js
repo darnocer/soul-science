@@ -1,3 +1,5 @@
+'use client'
+
 import Footer from '@/components/nav/Footer'
 
 import NavigationBar from '@/components/nav/NavigationBar'

@@ -1,3 +1,5 @@
+'use client'
+
 import { useEffect, useState } from 'react'
 import Link from '@/components/links/Link'
 import headerNavLinks from '@/data/nav/headerNavLinks'

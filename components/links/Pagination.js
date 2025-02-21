@@ -1,3 +1,5 @@
+'use client'
+
 import LinkArrow from '@/components/links/LinkArrow'
 import { useRouter } from 'next/router'
 
@@ -16,12 +18,12 @@ export default function Pagination({ totalPages, currentPage }) {
   const nextPage = currentPage < totalPages
 
   return (
-    <div className='space-y-2 pt-6 pb-8 md:space-y-5'>
-      <nav className='items-center flex justify-between'>
+    <div className='space-y-2 pb-8 pt-6 md:space-y-5'>
+      <nav className='flex items-center justify-between'>
         {prevPage ? (
           <LinkArrow text='Previous' direction='left' href={prevPageLink} />
         ) : (
-          <button rel='previous' className='font-semibold cursor-auto disabled:opacity-50' disabled>
+          <button rel='previous' className='cursor-auto font-semibold disabled:opacity-50' disabled>
             Previous
           </button>
         )}
@@ -31,7 +33,7 @@ export default function Pagination({ totalPages, currentPage }) {
         {nextPage ? (
           <LinkArrow text='Next' direction='right' href={nextPageLink} />
         ) : (
-          <button rel='next' className='font-semibold cursor-auto disabled:opacity-50' disabled>
+          <button rel='next' className='cursor-auto font-semibold disabled:opacity-50' disabled>
             Next
           </button>
         )}
