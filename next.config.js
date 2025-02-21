@@ -58,22 +58,22 @@ module.exports = withBundleAnalyzer({
       },
     ]
   },
-  webpack: (config, { isServer }) => {
-    console.log('Building with Webpack - isServer:', isServer)
+  // webpack: (config, { isServer }) => {
+  //   console.log('Building with Webpack - isServer:', isServer)
 
-    if (isServer) {
-      config.plugins.push(
-        new (require('webpack').IgnorePlugin)({
-          resourceRegExp: /react-icons|some-client-only-library/,
-        })
-      )
-    }
+  //   if (isServer) {
+  //     config.plugins.push(
+  //       new (require('webpack').IgnorePlugin)({
+  //         resourceRegExp: /react-icons|some-client-only-library/,
+  //       })
+  //     )
+  //   }
 
-    config.module.rules.push({
-      test: /\.svg$/,
-      use: ['@svgr/webpack'],
-    })
+  //   config.module.rules.push({
+  //     test: /\.svg$/,
+  //     use: ['@svgr/webpack'],
+  //   })
 
-    return config
-  },
+  //   return config
+  // },
 })
