@@ -7,6 +7,7 @@ import Button from '@/components/links/Button'
 import Link from '@/components/links/Link'
 import SearchIcon from '@/components/icons/ui/SearchIcon'
 import Author from '@/components/post/Author'
+import Tag from '@/components/links/Tag'
 
 const POSTS_PER_PAGE = 9
 
@@ -50,7 +51,7 @@ export default function CardLayout({ posts, heading, description, level = 'h2' }
             <p className='text-center font-semibold text-gray-600 dark:text-gray-400'>No posts found.</p>
           ) : (
             displayPosts.map((post) => {
-              const { slug, date, title, summary, image, author } = post
+              const { slug, date, title, summary, image, author, tags } = post
               const imagePath = `/static/images/featured/${image}.png`
 
               return (
@@ -66,12 +67,16 @@ export default function CardLayout({ posts, heading, description, level = 'h2' }
                       />
                     </div>
                     <div className='flex flex-grow flex-col p-4'>
-                      <time
+                      {/* <time
                         dateTime={date}
-                        className='text-xs font-semibold uppercase text-gray-600 dark:text-gray-400'
+                        className='text-xxs font-semibold uppercase text-gray-600 dark:text-gray-500'
                       >
                         {formatDate(date)}
-                      </time>
+                      </time> */}
+                      {tags.map((tag) => (
+                        <Tag key={tag} text={tag} />
+                      ))}
+
                       <h3 className='mt-2 text-xl font-bold text-gray-900 dark:text-gray-200'>{title}</h3>
                       <p className='mt-2 flex-grow text-sm font-medium text-gray-700 dark:text-gray-400'>{summary}</p>
                       {author && (
