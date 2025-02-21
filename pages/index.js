@@ -26,8 +26,8 @@ export default function Home({ posts, homeContent }) {
         <>
           <Hero
             heading='Soul Signals'
-            subtitle='Lorem ipsum'
-            description='Lorem ipsum'
+            subtitle='Microdoses of wisdom for soul searchers and truth seekers.'
+            description='Subscribe for short insights on healing and self-discovery.'
             disclaimer='this is a disclaimer'
           />
           <CardLayout posts={posts} heading='All Posts' />

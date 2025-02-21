@@ -1,7 +1,7 @@
 const siteMetadata = {
   title: 'Soul Science Wellness',
   author: 'Darian',
-  description: 'Lorem ipsum',
+  description: 'Microdoses of wisdom for soul searchers and truth seekers.',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://www.soul-science.com',
