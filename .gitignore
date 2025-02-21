@@ -42,3 +42,6 @@ content/.obsidian
 content/drafts
 content/meta
 .env*.local
+
+# Local Netlify folder
+.netlify
