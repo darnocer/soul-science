@@ -14,7 +14,7 @@ import { useEffect, useState } from 'react'
 
 import siteMetadata from '@/data/siteMetadata'
 import CustomAnalytics from '@/components/analytics'
-// import LayoutWrapper from '@/components/layout/LayoutWrapper'
+import LayoutWrapper from '@/components/layout/LayoutWrapper'
 import { ClientReload } from '@/components/ClientReload'
 
 import { Analytics } from '@vercel/analytics/react'
@@ -39,11 +39,7 @@ export default function App({ Component, pageProps }) {
       {isDevelopment && isSocket && <ClientReload />}
       <CustomAnalytics />
       <Analytics />
-      {/* <LayoutWrapper> */}
-      <>
-        {typeof window !== 'undefined' && <Component {...pageProps} />}
-        {/* </LayoutWrapper> */}
-      </>
+      <LayoutWrapper>{typeof window !== 'undefined' && <Component {...pageProps} />}</LayoutWrapper>
     </ThemeProvider>
   )
 }
