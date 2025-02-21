@@ -7,6 +7,7 @@ import { getAllTags } from '@/lib/getAllTags'
 import kebabCase from '@/lib/utils/kebabCase'
 import fs from 'fs'
 import path from 'path'
+import Breadcrumbs from '@/components/links/Breadcrumbs'
 
 import pageContent from '@/data/pageContent'
 
@@ -50,6 +51,7 @@ export default function Tag({ posts, tag }) {
   return (
     <>
       <TagSEO title={`${title} Posts`} description={`${title} tags | ${siteMetadata.author}`} />
+      <Breadcrumbs />
       <CardLayout posts={posts} heading={title} level='h1' description={description} />
     </>
   )

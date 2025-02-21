@@ -8,6 +8,8 @@ import kebabCase from '@/lib/utils/kebabCase'
 import fs from 'fs'
 import path from 'path'
 
+import Breadcrumbs from '@/components/links/Breadcrumbs'
+
 import pageContent from '@/data/pageContent'
 
 const root = process.cwd()
@@ -60,6 +62,7 @@ export default function Type({ posts, type }) {
   return (
     <>
       <TagSEO title={`${title} Posts`} description={`${title} tags | ${siteMetadata.author}`} />
+      <Breadcrumbs />
       <CardLayout posts={posts} heading={title} level='h1' />
     </>
   )
