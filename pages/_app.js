@@ -40,9 +40,7 @@ export default function App({ Component, pageProps }) {
       <CustomAnalytics />
       <Analytics />
 
-      <LayoutWrapper>
-        <Component {...pageProps} />
-      </LayoutWrapper>
+      <LayoutWrapper>{typeof window !== 'undefined' && <Component {...pageProps} />}</LayoutWrapper>
     </ThemeProvider>
   )
 }
