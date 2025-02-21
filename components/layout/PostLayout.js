@@ -5,8 +5,8 @@ import siteMetadata from '@/data/siteMetadata'
 import PostHeaderSimple from '@/components/headings/PostHeaderSimple'
 import BlogSidebar from '@/components/post/BlogSidebar'
 
-// import dynamic from 'next/dynamic'
-// const ScrollIndicator = dynamic(() => import('@/components/post/ScrollIndicator'), { ssr: false })
+import dynamic from 'next/dynamic'
+const ScrollIndicator = dynamic(() => import('@/components/post/ScrollIndicator'), { ssr: false })
 
 const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`
 const discussUrl = (slug) =>
@@ -19,8 +19,8 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
 
   return (
     <SectionContainer padding='medium' container='large'>
-      <BlogSEO url={`${siteMetadata.siteUrl}/blog/${slug}`} authorDetails={authorDetails} {...frontMatter} />
-      {/* <ScrollIndicator direction='left' /> */}
+      <BlogSEO url={`${siteMetadata.siteUrl}/${slug}`} authorDetails={authorDetails} {...frontMatter} />
+      <ScrollIndicator direction='left' />
       <article>
         <div className='xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700'>
           <header>

@@ -31,7 +31,6 @@ export default function Home({ posts, homeContent }) {
           disclaimer='this is a disclaimer'
         />
       )}
-
       <CardLayout posts={posts} heading='All Posts' />
     </MetadataWrapper>
   )

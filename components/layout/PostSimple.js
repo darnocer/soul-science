@@ -12,8 +12,8 @@ import { useEffect } from 'react'
 import Prism from 'prismjs'
 import '../../lib/prism/dataview'
 
-// import dynamic from 'next/dynamic'
-// const ScrollIndicator = dynamic(() => import('@/components/post/ScrollIndicator'), { ssr: false })
+import dynamic from 'next/dynamic'
+const ScrollIndicator = dynamic(() => import('@/components/post/ScrollIndicator'), { ssr: false })
 
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {
   const { date, title, tags, summary, content_type } = frontMatter
@@ -29,7 +29,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
     <>
       <BlogSEO url={`${siteMetadata.siteUrl}/blog/${frontMatter.slug}`} {...frontMatter} />
 
-      {/* <ScrollIndicator direction='left' /> */}
+      <ScrollIndicator direction='left' />
       <article className='m-auto max-w-3xl'>
         <header>
           <PostHeader title={title} summary={summary} tags={tags} date={date} contentType={content_type} />
