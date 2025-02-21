@@ -13,7 +13,7 @@ import Prism from 'prismjs'
 import '../../lib/prism/dataview'
 
 import dynamic from 'next/dynamic'
-const ScrollIndicator = dynamic(() => import('@/components/ScrollIndicator'), { ssr: false })
+const ScrollIndicator = dynamic(() => import('@/components/post/ScrollIndicator'), { ssr: false })
 
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {
   const { date, title, tags, summary, content_type } = frontMatter

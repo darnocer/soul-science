@@ -6,7 +6,7 @@ import Logo from '@/components/nav/Logo'
 import Link from '@/components/links/Link'
 
 import dynamic from 'next/dynamic'
-const MobileNav = dynamic(() => import('@/components/MobileNav'), { ssr: false })
+const MobileNav = dynamic(() => import('@/components/nav/MobileNav'), { ssr: false })
 
 const NavigationBar = () => {
   return (
