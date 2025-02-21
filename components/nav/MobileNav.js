@@ -7,9 +7,8 @@ const MobileNav = () => {
   const [dropdownOpen, setDropdownOpen] = useState(Object.fromEntries(headerNavLinks.map((link) => [link.title, true])))
 
   useEffect(() => {
-    if (typeof document !== 'undefined') {
-      document.body.style.overflow = navShow ? 'hidden' : 'auto'
-    }
+    if (typeof window === 'undefined' || typeof document === 'undefined') return
+    document.body.style.overflow = navShow ? 'hidden' : 'auto'
   }, [navShow])
 
   const onToggleNav = () => {
