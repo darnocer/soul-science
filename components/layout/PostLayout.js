@@ -1,8 +1,7 @@
 import SectionContainer from '@/components/layout/SectionContainer'
 import { BlogSEO } from '@/components/seo/SEO'
 import siteMetadata from '@/data/siteMetadata'
-import Comments from '@/components/post/comments'
-import ScrollTopAndComment from '@/components/post/ScrollTopAndComment'
+
 import PostHeaderSimple from '@/components/headings/PostHeaderSimple'
 import BlogSidebar from '@/components/post/BlogSidebar'
 
@@ -21,7 +20,6 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
   return (
     <SectionContainer padding='medium' container='large'>
       <BlogSEO url={`${siteMetadata.siteUrl}/blog/${slug}`} authorDetails={authorDetails} {...frontMatter} />
-      <ScrollTopAndComment />
       <ScrollIndicator direction='left' />
       <article>
         <div className='xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700'>
