@@ -5,7 +5,7 @@ import { BlogSEO } from '@/components/seo/SEO'
 import siteMetadata from '@/data/siteMetadata'
 
 import Breadcrumbs from '@/components/links/Breadcrumbs'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
 import LinkArrow from '@/components/links/LinkArrow'
 import PostHeader from '@/components/headings/PostHeader'
 

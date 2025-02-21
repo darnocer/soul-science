@@ -1,7 +1,7 @@
 'use client'
 
 import LinkArrow from '@/components/links/LinkArrow'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
 
 export default function Pagination({ totalPages, currentPage }) {
   const router = useRouter()
