@@ -3,10 +3,9 @@ import MetadataWrapper from '@/components/seo/MetadataWrapper'
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import { getSectionContent, getAllFilesFrontMatter } from '@/lib/mdx'
 
-import CardLayout from '@/components/listings/CardLayout'
-
 import dynamic from 'next/dynamic'
 const Hero = dynamic(() => import('@/components/blocks/Hero'), { ssr: false })
+const CardLayout = dynamic(() => import('@/components/listings/CardLayout'), { ssr: false })
 
 const PAGE_TITLE = 'Home'
 
