@@ -21,16 +21,17 @@ export default function Home({ posts, homeContent }) {
   const DEFAULT_LAYOUT = 'ContentLayout'
 
   return (
-    <MetadataWrapper>
-      {typeof window !== 'undefined' && (
-        <Hero
-          heading='Soul Signals'
-          subtitle='Microdoses of wisdom for soul searchers and truth seekers.'
-          description='Subscribe for short insights on presence, healing, and self-discovery.'
-          disclaimer='this is a disclaimer'
-        />
-      )}
-      <CardLayout posts={posts} heading='All Posts' />
-    </MetadataWrapper>
+    <p>Hello, World</p>
+    // <MetadataWrapper>
+    //   {typeof window !== 'undefined' && (
+    //     <Hero
+    //       heading='Soul Signals'
+    //       subtitle='Microdoses of wisdom for soul searchers and truth seekers.'
+    //       description='Subscribe for short insights on presence, healing, and self-discovery.'
+    //       disclaimer='this is a disclaimer'
+    //     />
+    //   )}
+    //   <CardLayout posts={posts} heading='All Posts' />
+    // </MetadataWrapper>
   )
 }
