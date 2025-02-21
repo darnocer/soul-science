@@ -4,19 +4,16 @@ import headerNavLinks from '@/data/nav/headerNavLinks'
 
 const MobileNav = () => {
   const [navShow, setNavShow] = useState(false)
-  const [dropdownOpen, setDropdownOpen] = useState(
-    Object.fromEntries(headerNavLinks.map((link) => [link.title, true])) // Default all dropdowns to open
-  )
+  const [dropdownOpen, setDropdownOpen] = useState(Object.fromEntries(headerNavLinks.map((link) => [link.title, true])))
 
-  // Ensure `document.body.style.overflow` is updated only on the client
   useEffect(() => {
     if (typeof document !== 'undefined') {
       document.body.style.overflow = navShow ? 'hidden' : 'auto'
     }
-  }, [navShow]) // Runs whenever `navShow` changes
+  }, [navShow])
 
   const onToggleNav = () => {
-    setNavShow((status) => !status) // Just toggle state, effect will handle `document.body`
+    setNavShow((status) => !status)
   }
 
   const toggleDropdown = (title) => {
@@ -77,7 +74,7 @@ const MobileNav = () => {
                       viewBox='0 0 20 20'
                       fill='currentColor'
                       className={`h-5 w-5 transition-transform ${dropdownOpen[link.title] ? 'rotate-180' : ''}`}
-                      style={{ flexShrink: 0 }} // Prevents shifting
+                      style={{ flexShrink: 0 }}
                     >
                       <path
                         fillRule='evenodd'
