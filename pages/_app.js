@@ -13,11 +13,11 @@ import Head from 'next/head'
 import { useEffect, useState } from 'react'
 
 import siteMetadata from '@/data/siteMetadata'
-import CustomAnalytics from '@/components/analytics'
+// import CustomAnalytics from '@/components/analytics'
 import LayoutWrapper from '@/components/layout/LayoutWrapper'
 import { ClientReload } from '@/components/ClientReload'
 
-import { Analytics } from '@vercel/analytics/react'
+// import { Analytics } from '@vercel/analytics/react'
 
 const isDevelopment = process.env.NODE_ENV === 'development'
 const isSocket = process.env.SOCKET
@@ -37,9 +37,8 @@ export default function App({ Component, pageProps }) {
         <meta content='width=device-width, initial-scale=1' name='viewport' />
       </Head>
       {isDevelopment && isSocket && <ClientReload />}
-      <CustomAnalytics />
-      <Analytics />
-
+      {/* <CustomAnalytics />
+      <Analytics /> */}
       <LayoutWrapper>{typeof window !== 'undefined' && <Component {...pageProps} />}</LayoutWrapper>
     </ThemeProvider>
   )
