@@ -1,6 +1,10 @@
+'use client'
+
 /* eslint-disable react/display-name */
 import { useMemo } from 'react'
 import { getMDXComponent } from 'mdx-bundler/client'
+import dynamic from 'next/dynamic'
+
 import Image from '@/components/blocks/Image'
 import CustomLink from '@/components/links/Link'
 import TOCInline from '@/components/post/TOCInline'
@@ -39,7 +43,7 @@ export const MDXComponents = {
     if (!layout) {
       return <div {...rest} />
     }
-    const Layout = require(`./layout/${layout}`).default
+    const Layout = dynamic(() => import(`./layout/${layout}`).then((mod) => mod.default))
     return <Layout {...rest} />
   },
 }
