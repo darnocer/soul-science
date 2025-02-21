@@ -5,8 +5,8 @@ import headerNavLinks from '@/data/nav/headerNavLinks'
 import Logo from '@/components/nav/Logo'
 import Link from '@/components/links/Link'
 
-import dynamic from 'next/dynamic'
-const MobileNav = dynamic(() => import('@/components/nav/MobileNav'), { ssr: false })
+// import dynamic from 'next/dynamic'
+// const MobileNav = dynamic(() => import('@/components/nav/MobileNav'), { ssr: false })
 
 const NavigationBar = () => {
   return (
@@ -30,7 +30,7 @@ const NavigationBar = () => {
           )}
         </div>
         <ThemeSwitch />
-        <MobileNav />
+        {/* <MobileNav /> */}
       </nav>
     </header>
   )
