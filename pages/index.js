@@ -3,8 +3,10 @@ import MetadataWrapper from '@/components/seo/MetadataWrapper'
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import { getSectionContent, getAllFilesFrontMatter } from '@/lib/mdx'
 
-import Hero from '@/components/marketing/Hero'
 import CardLayout from '@/components/listings/CardLayout'
+
+import dynamic from 'next/dynamic'
+const Hero = dynamic(() => import('@/components/blocks/Hero'), { ssr: false })
 
 const PAGE_TITLE = 'Home'
 
@@ -21,12 +23,14 @@ export default function Home({ posts, homeContent }) {
 
   return (
     <MetadataWrapper>
-      <Hero
-        heading='Soul Signals'
-        subtitle='Microdoses of wisdom for soul searchers and truth seekers.'
-        description='Subscribe for short insights on presence, healing, and self-discovery.'
-        disclaimer='this is a disclaimer'
-      />
+      {typeof window !== 'undefined' && (
+        <Hero
+          heading='Soul Signals'
+          subtitle='Microdoses of wisdom for soul searchers and truth seekers.'
+          description='Subscribe for short insights on presence, healing, and self-discovery.'
+          disclaimer='this is a disclaimer'
+        />
+      )}
 
       <CardLayout posts={posts} heading='All Posts' />
     </MetadataWrapper>
