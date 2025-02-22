@@ -2,8 +2,10 @@ import SectionContainer from '@/components/layout/SectionContainer'
 import { BlogSEO } from '@/components/seo/SEO'
 import siteMetadata from '@/data/siteMetadata'
 
-import PostHeaderSimple from '@/components/headings/PostHeaderSimple'
+import PostHeaderSimple from '@/components/headings/PostHeader'
 import BlogSidebar from '@/components/post/BlogSidebar'
+
+import { BlogNewsletterForm } from '@/components/blocks/NewsletterForm'
 
 import dynamic from 'next/dynamic'
 const ScrollIndicator = dynamic(() => import('@/components/post/ScrollIndicator'), { ssr: false })
@@ -30,8 +32,8 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
             className='divide-y divide-gray-200 pb-8 dark:divide-gray-700 xl:grid xl:grid-cols-4 xl:gap-x-6 xl:divide-y-0'
             style={{ gridTemplateRows: 'auto 1fr' }}
           >
-            <BlogSidebar author={author} tags={tags} next={next} prev={prev} />
-            <main className='divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0'>
+            <BlogSidebar type={content_type} author={author} tags={tags} next={next} prev={prev} />
+            <main className=' xl:col-span-3 xl:row-span-2 xl:pb-0'>
               <div className='prose max-w-none pb-6 pt-10 font-serif dark:prose-dark'>{children}</div>
               {/* <div className='pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300'>
                 <Link href={discussUrl(slug)} rel='nofollow'>
@@ -41,6 +43,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                 <Link href={editUrl(fileName)}>{'View on GitHub'}</Link>
               </div>
               <Comments frontMatter={frontMatter} /> */}
+              <BlogNewsletterForm />
             </main>
           </div>
         </div>
