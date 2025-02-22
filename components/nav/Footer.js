@@ -10,7 +10,7 @@ export default function Footer() {
       <div className='container mx-auto flex max-w-5xl flex-col items-center justify-between px-6 py-8 md:flex-row'>
         <div className='mb-6 flex max-w-xs flex-col items-center text-center md:mb-0 md:items-start md:text-left'>
           <Logo type='full' />
-          <p className='mt-3 text-sm font-medium text-gray-600 dark:text-gray-400'>{siteMetadata.description}</p>
+          <p className='mt-3 text-sm font-medium text-gray-700 dark:text-gray-400'>{siteMetadata.description}</p>
         </div>
 
         <div className='flex flex-col content-between'>
