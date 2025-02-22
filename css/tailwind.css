@@ -4,7 +4,7 @@
 
 :root {
   --tertiary: #39b4c4;
-  --secondary: #eab307;
+  --secondary: #b78000;
   --primary: #30a185;
   --accent: #b93f3f;
   --gray-100: #ffffff;
@@ -102,16 +102,11 @@
   }
 }
 
-/* Italic text */
-.prose em {
-  font-family: 'Edu', cursive;
-
-  font-size: 1.4rem;
-
-  color: var(--accent);
-
-  line-height: 100%;
+a {
+  cursor: pointer;
 }
+
+/* Italic text */
 
 .prose .no-style em {
   font-family: serif !important;
