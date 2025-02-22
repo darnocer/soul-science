@@ -23,7 +23,9 @@ export default function PostHeader({ title, summary, date }) {
             </dl>
           ) : null}
         </div>
-        <PageTitle>{title}</PageTitle>
+        <div className='m-auto max-w-xl'>
+          <PageTitle>{title}</PageTitle>
+        </div>
         <p className='mt-4 text-center font-serif text-base italic text-gray-700 dark:text-gray-500'>{summary}</p>
       </div>
     </>
