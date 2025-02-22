@@ -1,6 +1,7 @@
 import Link from '@/components/links/Link'
 
 import MetadataWrapper from '@/components/seo/MetadataWrapper'
+import Button from '@/components/links/Button'
 
 const PAGE_TITLE = '404'
 
@@ -17,11 +18,7 @@ export default function FourZeroFour() {
           <p className='mb-4 text-xl font-bold leading-normal text-gray-700 dark:text-gray-300 md:text-2xl'>
             Oops! Not sure where that page went... :)
           </p>
-          <Link href='/'>
-            <button className='focus:shadow-outline-primary inline rounded-lg border border-transparent bg-primary-600 px-4 py-2 text-sm font-semibold text-white shadow transition-colors duration-200 ease-in hover:bg-primary-700 focus:outline-none dark:hover:bg-primary-500'>
-              Go back
-            </button>
-          </Link>
+          <Button text='Go Back' link='/' type='primary' />
         </div>
       </div>
     </MetadataWrapper>
