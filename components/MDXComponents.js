@@ -16,11 +16,11 @@ import Callout from '@/components/blocks/Callout'
 import Heading from '@/components/headings/Heading'
 import DefinitionCallout from '@/components/blocks/DefinitionCallout'
 import CtaButton from '@/components/links/CtaButton'
-import Status from '@/components/blocks/Status'
+import Status from '@/components/flare/Status'
 import Testimonial from '@/components/blocks/Testimonial'
 import CardGrid from '@/components/blocks/CardGrid'
 import Breadcrumbs from './links/Breadcrumbs'
-import TimeOfDayText from './headings/TimeOfDayText'
+import TimeOfDayText from './flare/TimeOfDayText'
 
 export const MDXComponents = {
   Image,
