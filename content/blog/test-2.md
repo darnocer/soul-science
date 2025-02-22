@@ -1,5 +1,5 @@
 ---
-title: This is a test blog
+title: This is a test blog with a longer title
 summary: This is an example description
 aliases: 
 tags:
