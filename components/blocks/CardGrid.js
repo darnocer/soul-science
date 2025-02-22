@@ -18,7 +18,7 @@ const CardGrid = ({ heading, type = 'work' }) => {
 
   return (
     <>
-      <Heading level='h2' text={heading} />
+      <Heading>{heading}</Heading>
       <div className='not-prose grid auto-rows-fr grid-cols-1 gap-4 py-4 sm:grid-cols-2 sm:py-6 md:grid-cols-3 lg:grid-cols-4'>
         {data.map(({ title, link, icon, status }, index) => {
           const isDisabled = status === 'disabled'

@@ -9,7 +9,7 @@ import Button from '@/components/links/Button'
 import Link from '@/components/links/Link'
 import SearchIcon from '@/components/icons/ui/SearchIcon'
 import Author from '@/components/post/Author'
-import Tag from '@/components/links/Tag'
+import Tags from '@/components/links/Tags'
 
 const POSTS_PER_PAGE = 9
 
@@ -32,7 +32,7 @@ export default function CardLayout({ posts, heading, description, level = 'h2' }
 
   return (
     <SectionContainer padding='medium' container='large'>
-      <Heading text={heading} level={level} />
+      <Heading>{heading}</Heading>
       {/* <p className='font-medium text-gray-800 dark:text-gray-300'>{description}</p> */}
       <div className='space-y-4'>
         <div className='mb-10 space-y-2 text-center'>
@@ -58,14 +58,14 @@ export default function CardLayout({ posts, heading, description, level = 'h2' }
 
               return (
                 <Link key={slug} href={`/${slug}`} className='block'>
-                  <article className='flex h-full cursor-pointer flex-col rounded-lg border border-gray-200 bg-white shadow-md transition-all duration-300 hover:shadow-lg dark:border-gray-700 dark:bg-black dark:hover:border-gray-300/60 dark:hover:bg-gray-850'>
+                  <article className='group flex h-full cursor-pointer flex-col rounded-lg border border-gray-200 bg-white shadow-md transition-all duration-300 hover:bg-gray-150 hover:shadow-lg dark:border-gray-700 dark:bg-black dark:hover:border-gray-300/60 dark:hover:bg-gray-850'>
                     <div className='relative h-40 w-full overflow-hidden rounded-t-lg'>
                       <Image
                         src={imagePath}
                         alt={title}
                         layout='fill'
                         objectFit='cover'
-                        className='transform transition-transform duration-300 ease-in-out hover:scale-105'
+                        className='transform transition-transform duration-300 ease-in-out group-hover:scale-105'
                       />
                     </div>
                     <div className='flex flex-grow flex-col p-4'>
@@ -75,9 +75,8 @@ export default function CardLayout({ posts, heading, description, level = 'h2' }
                       >
                         {formatDate(date)}
                       </time> */}
-                      {tags.map((tag) => (
-                        <Tag key={tag} text={tag} />
-                      ))}
+
+                      <Tags tags={tags} />
 
                       <h3 className='mt-2 text-xl font-bold text-gray-900 dark:text-gray-200'>{title}</h3>
                       <p className='mt-2 flex-grow text-sm font-medium text-gray-700 dark:text-gray-400'>{summary}</p>

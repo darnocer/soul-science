@@ -5,7 +5,7 @@ import { MDXRemote } from 'next-mdx-remote'
 import formatDateShort from '@/lib/utils/formatDateShort'
 import LinkArrow from '@/components/links/LinkArrow'
 import Link from '@/components/links/Link'
-import Tag from '@/components/links/Tag'
+import Tags from '@/components/links/Tags'
 import Heading from '@/components/headings/Heading'
 import ChevronRight from '@/components/icons/ui/ChevronRightIcon'
 import SectionContainer from '@/components/layout/SectionContainer'
@@ -34,7 +34,7 @@ export default function RecentSnippets({ heading, numPosts = MAX_SNIPPETS }) {
 
   return (
     <>
-      <Heading text={heading} />
+      <Heading>{heading}</Heading>
       <div className='space-y-6'>
         <ul className='space-y-6 divide-y divide-gray-200 dark:divide-gray-700'>
           {snippets.length === 0 && 'No snippets found.'}
@@ -57,9 +57,7 @@ export default function RecentSnippets({ heading, numPosts = MAX_SNIPPETS }) {
                     {/* <span className='text-gray-700 dark:text-gray-400'>|</span> */}
                     {tags && (
                       <div className='my-2 flex items-baseline gap-x-2'>
-                        {tags.map((tag) => (
-                          <Tag key={tag} text={tag} />
-                        ))}
+                        <Tag tags={tags} />
                       </div>
                     )}
                   </div>

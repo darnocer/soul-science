@@ -1,7 +1,7 @@
 import { getAllTags } from '@/lib/getAllTags'
 
 import PageTitle from '@/components/headings/PageTitle'
-import TagList from '@/components/links/TagList'
+import Tags from '@/components/links/Tags'
 
 import pageContent from '@/data/pageContent'
 
@@ -15,7 +15,9 @@ export async function getStaticProps() {
   return { props: { tags } }
 }
 
-export default function Tags({ tags }) {
+export default function TagsPage({ tags }) {
+  const tagList = Array.isArray(tags) ? tags : Object.keys(tags) || []
+
   return (
     <MetadataWrapper title={PAGE_TITLE}>
       <div className='flex flex-col items-start justify-start divide-y divide-gray-200 dark:divide-gray-700 md:mt-24 md:flex-row md:items-center md:justify-center md:space-x-6 md:divide-y-0'>
@@ -23,7 +25,7 @@ export default function Tags({ tags }) {
           <PageTitle>{pageContent.tags.title}</PageTitle>
         </div>
         <div className='flex max-w-lg flex-wrap'>
-          <TagList tags={tags} />
+          <Tags tags={tagList} />
         </div>
       </div>
     </MetadataWrapper>

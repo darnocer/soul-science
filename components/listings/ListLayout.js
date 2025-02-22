@@ -5,7 +5,7 @@ import { useState } from 'react'
 import formatDate from '@/lib/utils/formatDate'
 
 import Link from '@/components/links/Link'
-import Tag from '@/components/links/Tag'
+import Tags from '@/components/links/Tags'
 import Pagination from '@/components/links/Pagination'
 import PageTitle from '@/components/headings/PageTitle'
 import LinkArrow from '@/components/links/LinkArrow'
@@ -92,7 +92,7 @@ export default function ListLayout({ posts, title, description, initialDisplayPo
                           </h3>
                         </div>
                         <div className='pb- flex flex-wrap gap-x-2 pb-1'>
-                          {Array.isArray(tags) && tags.map((tag) => <Tag key={tag} text={tag} />)}
+                          <Tags tags={tags} />
                         </div>
                         <div className='prose max-w-none font-medium text-gray-700 dark:text-gray-300'>{summary}</div>
                         <LinkArrow text='Read More' direction='right' href={`/${slug}`} />

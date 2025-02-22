@@ -3,7 +3,7 @@ import formatDateShort from '@/lib/utils/formatDateShort'
 import LinkArrow from '@/components/links/LinkArrow'
 import Heading from '@/components/headings/Heading'
 import SectionContainer from '@/components/layout/SectionContainer'
-import Tag from '@/components/links/Tag'
+import Tags from '@/components/links/Tags'
 import Badge from '@/components/links/Badge'
 
 const MAX_DISPLAY = 5
@@ -34,14 +34,14 @@ export default function RecentPosts({ posts, heading, directory, categoryFilter,
 
   return (
     <>
-      <Heading text={heading} />
+      <Heading>{heading}</Heading>
       <div className='space-y-6'>
         <ul className='space-y-6'>
           {filteredByTags.length === 0 && 'No posts found.'}
           {filteredByTags.slice(0, MAX_DISPLAY).map((frontMatter) => {
             const { slug, date, title, tags, content_type } = frontMatter
             return (
-              <li key={slug} className='group no-arrow py-2'>
+              <li key={slug} className='no-arrow group py-2'>
                 <article className='flex flex-col gap-2'>
                   <div className='flex items-center gap-x-2'>
                     {date && (
@@ -57,14 +57,12 @@ export default function RecentPosts({ posts, heading, directory, categoryFilter,
                     <span className='text-gray-700 dark:text-gray-400'>|</span>
                     {tags && (
                       <div className='flex items-baseline gap-x-2'>
-                        {tags.map((tag) => (
-                          <Tag key={tag} text={tag} />
-                        ))}
+                        <Tags tags={tags} />
                       </div>
                     )}
                   </div>
                   <Link href={`/${slug}`} className='text-gray-900 dark:text-gray-200'>
-                    <h3 className='capitalize text-2xl font-bold tracking-tight hover:cursor-pointer hover:underline'>
+                    <h3 className='text-2xl font-bold capitalize tracking-tight hover:cursor-pointer hover:underline'>
                       {title}
                     </h3>
                   </Link>
