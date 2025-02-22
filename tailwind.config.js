@@ -29,6 +29,12 @@ const sharedTypographyStyles = {
           textDecoration: 'underline',
         },
       },
+      em: {
+        fontFamily: 'Edu',
+        fontSize: '1.4rem',
+        lineHeight: '100%',
+        color: customColors.secondary[700],
+      },
       // headings
       h1: {
         fontWeight: '800',
@@ -103,7 +109,7 @@ const sharedTypographyStyles = {
         color: colors.gray[800],
       },
       blockquote: {
-        borderLeftColor: customColors.secondary[500],
+        borderLeftColor: customColors.secondary[700],
         color: colors.gray[700],
       },
     },
@@ -167,6 +173,9 @@ module.exports = {
                 color: customColors.primary[400],
                 textDecoration: 'underline',
               },
+            },
+            em: {
+              colors: customColors.secondary[400],
             },
             h1: {
               ...sharedTypographyStyles.css[0].h1,
