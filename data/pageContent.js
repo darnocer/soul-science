@@ -1,5 +1,7 @@
 const pageContent = {
   newsletter: {
+    blogTitle: 'Does this resonate?',
+    blogDescription: 'Subscribe to occasionally get notified of new posts to your inbox.',
     termsError: 'You must agree to the terms before subscribing.',
     emailError: 'Oops. Your e-mail address is invalid or you are already subscribed!',
     success: 'Please check your email to confirm your subscription.',
@@ -7,8 +9,8 @@ const pageContent = {
     placeholderSubscribed: 'Success! 🎉 ',
     button: 'Sign Up',
     buttonSubscribed: 'Thank you!',
-    consent: 'I agree to receive emails.',
-    disclaimer: '',
+    consent: 'I agree to receive emails and understand I can unsubscribe at anytime.',
+    disclaimer: 'No funny business with your personal data, ever. Promise.',
   },
   posts: {
     title: 'All Posts',
