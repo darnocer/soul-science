@@ -22,7 +22,7 @@ const ScrollIndicator = ({ direction = 'top' }) => {
   }, [])
 
   const THICKNESS = '10px'
-  const COLORS = 'from-tertiary-300 to-primary-700'
+  const COLORS = 'from-secondary-300 to-secondary-700'
 
   const isHorizontal = direction === 'top'
 
