@@ -3,6 +3,7 @@ import footerNavLinks from '@/data/nav/footerNavLinks'
 import siteMetadata from '@/data/siteMetadata'
 import Link from '@/components/links/Link'
 import NewsletterForm from '@/components/blocks/NewsletterForm'
+import React from 'react'
 
 export default function Footer() {
   return (
@@ -10,28 +11,34 @@ export default function Footer() {
       <div className='container mx-auto flex max-w-5xl flex-col items-center justify-between px-6 py-8 md:flex-row'>
         <div className='mb-6 flex max-w-xs flex-col items-center text-center md:mb-0 md:items-start md:text-left'>
           <Logo type='full' />
-          <p className='mt-3 text-sm font-medium text-gray-700 dark:text-gray-400'>{siteMetadata.description}</p>
+          <p className='mt-3 px-4 text-sm font-medium text-gray-700 dark:text-gray-500 md:px-0'>
+            {siteMetadata.description}
+          </p>
         </div>
 
         <div className='flex flex-col content-between'>
-          <nav className='mr-6 flex justify-end gap-4 text-sm font-medium text-gray-600 dark:text-gray-400'>
-            {footerNavLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className='font-semibold uppercase underline hover:text-gray-900 dark:hover:text-gray-200'
-              >
-                {link.title}
-              </Link>
+          <nav className='m-0 flex justify-center text-sm font-medium text-gray-600 dark:text-gray-400 md:mr-6 md:justify-end'>
+            {footerNavLinks.map((link, index) => (
+              <React.Fragment key={link.href}>
+                <Link
+                  href={link.href}
+                  className='font-semibold uppercase transition-all duration-200 ease-in hover:text-gray-900 hover:underline dark:hover:text-gray-300'
+                >
+                  {link.title}
+                </Link>
+                {index < footerNavLinks.length - 1 && ( // Only add the pipe between links, not at the end
+                  <span className='mx-2 text-gray-500 dark:text-gray-400'>|</span>
+                )}
+              </React.Fragment>
             ))}
           </nav>
-          <div className='mt-6'>
+          <div className='mt-6 max-w-md'>
             <NewsletterForm />
           </div>
         </div>
       </div>
 
-      <div className='py-4 text-center text-xs font-medium text-gray-500 dark:border-gray-800 dark:text-gray-400'>
+      <div className='py-4 text-center text-xs font-medium text-gray-500 dark:border-gray-800 dark:text-gray-600'>
         <p>{`© ${new Date().getFullYear()} rootedvision`}</p>
       </div>
     </footer>
