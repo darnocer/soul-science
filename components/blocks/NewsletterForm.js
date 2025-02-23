@@ -57,7 +57,7 @@ const NewsletterForm = ({ title, description, disclaimer = false }) => {
   return (
     <div className='relative flex items-center justify-center'>
       {subscribed && (
-        <div className='absolute left-[75%] top-[50%] w-64 -translate-x-1/2 -translate-y-1/2'>
+        <div className='absolute left-[50%] top-[50%] w-64 -translate-x-1/2 -translate-y-1/2 md:left-[75%]'>
           <Lottie animationData={confettiAnimation} autoplay loop={false} />
         </div>
       )}
@@ -72,7 +72,7 @@ const NewsletterForm = ({ title, description, disclaimer = false }) => {
               <span className='sr-only'>Email address</span>
               <input
                 autoComplete='email'
-                className='min-h-[50px] w-full rounded-md px-4 text-sm font-medium focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary-600 dark:bg-black md:min-h-full'
+                className='min-h-[50px] w-full rounded-md px-4 text-base font-medium focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary-600 dark:bg-black md:min-h-full'
                 id='email-input'
                 name='email'
                 placeholder={subscribed ? content.placeholderSubscribed : content.placeholder}
