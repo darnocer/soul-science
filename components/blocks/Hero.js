@@ -1,9 +1,9 @@
 import Logo from '@/components/nav/Logo'
 import NewsletterForm from '@/components/blocks/NewsletterForm'
 
-export default function Hero({ heading, subtitle, description, disclaimer }) {
+export default function Hero({ heading, subtitle, description }) {
   return (
-    <section className='flex min-h-[50vh] w-full flex-col items-center justify-center px-4  text-center md:min-h-[60vh]'>
+    <section className='flex min-h-[50vh] w-full flex-col items-center justify-center text-center md:min-h-[60vh]'>
       <div className='hidden md:block'>
         <Logo />
       </div>
