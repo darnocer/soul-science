@@ -10,7 +10,7 @@ import pageContent from '@/data/pageContent'
 
 const content = pageContent.newsletter
 
-const NewsletterForm = ({ title, description, disclaimer }) => {
+const NewsletterForm = ({ title, description, disclaimer = false }) => {
   const inputEl = useRef(null)
   const [error, setError] = useState(false)
   const [message, setMessage] = useState('')
@@ -49,6 +49,11 @@ const NewsletterForm = ({ title, description, disclaimer }) => {
     setMessage(content.success)
   }
 
+  const Message = ({ condition, text, textClasses }) => {
+    if (!condition) return null
+    return <p className={`mt-4 w-full text-center text-sm font-medium md:text-left ${textClasses}`}>{text}</p>
+  }
+
   return (
     <div className='relative flex items-center justify-center'>
       {subscribed && (
@@ -61,13 +66,13 @@ const NewsletterForm = ({ title, description, disclaimer }) => {
         {title && <h3 className='pb-1 text-xl font-bold text-gray-800 dark:text-gray-200'>{title}</h3>}
         {description && <p className='mb-4 mt-2 text-sm font-medium text-gray-500'>{description}</p>}
 
-        <form className='flex max-w-md flex-col flex-wrap sm:flex-nowrap' onSubmit={subscribe}>
+        <form className='flex w-full max-w-md flex-col flex-wrap sm:flex-nowrap' onSubmit={subscribe}>
           <div className='flex flex-col md:flex-row'>
-            <label htmlFor='email-input'>
+            <label htmlFor='email-input' className='w-full md:w-72'>
               <span className='sr-only'>Email address</span>
               <input
                 autoComplete='email'
-                className='min-h-[50px] w-full rounded-md px-4 text-sm font-medium focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary-600 dark:bg-black md:min-h-full md:w-72'
+                className='min-h-[50px] w-full rounded-md px-4 text-sm font-medium focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary-600 dark:bg-black md:min-h-full'
                 id='email-input'
                 name='email'
                 placeholder={subscribed ? content.placeholderSubscribed : content.placeholder}
@@ -78,9 +83,9 @@ const NewsletterForm = ({ title, description, disclaimer }) => {
               />
             </label>
 
-            <div className='mt-2 flex rounded-md shadow-sm sm:ml-3 md:mt-0'>
+            <div className='mt-2 flex w-full rounded-md shadow-sm sm:ml-3 md:mt-0 md:w-24'>
               <button
-                className={`exclude-underline ease hover:pointer mb-0 inline-flex w-full items-center justify-center whitespace-nowrap rounded-md border px-6 py-3 text-sm font-semibold uppercase shadow-md transition-all duration-200 hover:no-underline focus:outline-none focus:ring-2 focus:ring-primary-600 focus:ring-offset-2 dark:ring-offset-black md:py-4 ${
+                className={`exclude-underline ease hover:pointer mb-0 inline-flex w-full items-center justify-center whitespace-nowrap rounded-md border px-6 py-3 text-sm font-semibold uppercase shadow-md transition-all duration-200 hover:no-underline focus:outline-none focus:ring-2 focus:ring-primary-600 focus:ring-offset-2 disabled:cursor-not-allowed dark:ring-offset-black md:py-4 ${
                   subscribed
                     ? 'cursor-not-allowed border-gray-600 bg-gray-600/60 text-gray-800 dark:border-gray-600 dark:text-white'
                     : 'border-primary-600 bg-primary-500 text-white hover:border-primary-500 hover:bg-primary-400 dark:bg-primary-500 dark:text-white dark:hover:border-primary-600 dark:hover:bg-primary-600'
@@ -88,7 +93,7 @@ const NewsletterForm = ({ title, description, disclaimer }) => {
                 type='submit'
                 disabled={subscribed}
               >
-                {subscribed ? 'THANK YOU!' : content.button}
+                {subscribed ? 'Thanks!' : content.button}
               </button>
             </div>
           </div>
@@ -110,11 +115,14 @@ const NewsletterForm = ({ title, description, disclaimer }) => {
           )}
         </form>
 
-        {error && (
-          <div className='w-72 pt-2 text-sm font-medium text-accent-500 dark:text-accent-500 sm:w-96'>{message}</div>
-        )}
-        {subscribed && <p className='mt-4 text-sm font-medium text-green-600 dark:text-green-400'>{message}</p>}
-        {disclaimer && <p className='mt-4 text-xs italic text-gray-500 dark:text-gray-400'>{disclaimer}</p>}
+        <Message
+          condition={disclaimer}
+          text={content.disclaimer}
+          textClasses='text-gray-500 dark:text-gray-400 italic'
+        />
+
+        <Message condition={error} text={message} textClasses='text-accent-500 dark:text-accent-500' />
+        <Message condition={subscribed} text={message} textClasses='text-green-600 dark:text-green-400' />
       </div>
     </div>
   )
@@ -125,10 +133,10 @@ export default NewsletterForm
 export const BlogNewsletterForm = ({
   title = content.blogTitle,
   description = content.blogDescription,
-  disclaimer = content.disclaimer,
+  disclaimer = true,
 }) => (
   <div className='mt-6 flex items-center justify-center'>
-    <div className='mx-6 w-full rounded-md border bg-gray-100 px-6 py-8 dark:border-gray-600/60 dark:bg-black'>
+    <div className='mx-0 w-full rounded-md border bg-gray-100 px-6 py-8 dark:border-gray-600/60 dark:bg-black md:mx-6'>
       <NewsletterForm title={title} description={description} disclaimer={disclaimer} />
     </div>
   </div>
