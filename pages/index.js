@@ -28,7 +28,6 @@ export default function Home({ posts }) {
             heading='Soul Signals'
             subtitle='Microdoses of wisdom for soul searchers and truth seekers.'
             description='Subscribe for short insights on healing and self-discovery.'
-            disclaimer='this is a disclaimer'
           />
           <CardLayout posts={posts} heading='All Posts' />
         </>
