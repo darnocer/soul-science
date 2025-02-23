@@ -4,7 +4,9 @@ import NewsletterForm from '@/components/blocks/NewsletterForm'
 export default function Hero({ heading, subtitle, description, disclaimer }) {
   return (
     <section className='flex min-h-[50vh] w-full flex-col items-center justify-center px-4  text-center md:min-h-[60vh]'>
-      <Logo />
+      <div className='hidden md:block'>
+        <Logo />
+      </div>
       <h1 className='mt-6 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 md:text-5xl lg:text-6xl'>
         {heading}
       </h1>
