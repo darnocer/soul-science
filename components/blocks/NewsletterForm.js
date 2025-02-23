@@ -59,7 +59,7 @@ const NewsletterForm = ({ title, description, disclaimer }) => {
 
       <div className='justify-content flex flex-col items-start'>
         {title && <h3 className='pb-1 text-xl font-bold text-gray-800 dark:text-gray-200'>{title}</h3>}
-        {description && <p className='mb-4 mt-2 text-sm font-medium text-gray-400'>{description}</p>}
+        {description && <p className='mb-4 mt-2 text-sm font-medium text-gray-500'>{description}</p>}
 
         <form className='flex max-w-md flex-col flex-wrap sm:flex-nowrap' onSubmit={subscribe}>
           <div className='flex flex-col md:flex-row'>
@@ -67,7 +67,7 @@ const NewsletterForm = ({ title, description, disclaimer }) => {
               <span className='sr-only'>Email address</span>
               <input
                 autoComplete='email'
-                className='min-h-[50px] w-72 rounded-md px-4 text-sm font-medium focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary-600 dark:bg-black md:min-h-full'
+                className='min-h-[50px] w-full rounded-md px-4 text-sm font-medium focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary-600 dark:bg-black md:min-h-full md:w-72'
                 id='email-input'
                 name='email'
                 placeholder={subscribed ? content.placeholderSubscribed : content.placeholder}
@@ -93,14 +93,17 @@ const NewsletterForm = ({ title, description, disclaimer }) => {
             </div>
           </div>
           {!subscribed && (
-            <div className='mt-3 flex w-full items-center space-x-2 sm:mt-4'>
+            <div className='mt-3 flex w-full items-start space-x-2 sm:mt-4'>
               <input
                 type='checkbox'
                 id='consent-checkbox'
                 onChange={(e) => setConsent(e.target.checked)}
                 className='h-4 w-4 rounded border-gray-300 text-primary-600 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-800 dark:ring-offset-black'
               />
-              <label htmlFor='consent-checkbox' className='text-xs font-medium text-gray-600 dark:text-gray-300'>
+              <label
+                htmlFor='consent-checkbox'
+                className='text-left text-xs font-medium leading-tight text-gray-600 dark:text-gray-400'
+              >
                 {content.consent}
               </label>
             </div>
