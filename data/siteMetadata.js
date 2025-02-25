@@ -1,7 +1,7 @@
 const siteMetadata = {
   title: 'Soul Science Wellness',
   author: 'Darian',
-  description: 'Microdoses of wisdom for soul searchers and truth seekers.',
+  description: 'Subscribe to the Soul Signals newsletter for short insights on healing, awakening, and transformation.',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://www.soul-science.com',
