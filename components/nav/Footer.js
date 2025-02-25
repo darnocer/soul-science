@@ -38,8 +38,14 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className='py-4 text-center text-xs font-medium text-gray-500 dark:border-gray-800 dark:text-gray-600'>
-        <p>{`© ${new Date().getFullYear()} rootedvision`}</p>
+      <div className='mb-2 mt-4 flex flex-col items-center text-xxs text-gray-500 dark:text-gray-400'>
+        <p className='text-xxs'>
+          Made with 👽 by{' '}
+          <a className='underline' href='/about' rel='noreferrer'>
+            darian.
+          </a>
+        </p>
+        <p>{`© ${new Date().getFullYear()} rootedvision, LLC.`}</p>
       </div>
     </footer>
   )
