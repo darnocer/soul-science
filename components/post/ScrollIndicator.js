@@ -1,28 +1,23 @@
-'use client'
-
 import { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 
-const ScrollIndicator = ({ direction = 'top' }) => {
+const ScrollIndicator = ({ direction = 'left' }) => {
   const [scrollPercentage, setScrollPercentage] = useState(0)
 
   useEffect(() => {
-    if (typeof window === 'undefined' || typeof document === 'undefined') return
-
     const updateScrollPercentage = () => {
       const scrollPosition = window.scrollY
-      const documentHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight || 1
-      setScrollPercentage((scrollPosition / documentHeight) * 100)
+      const documentHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
+      const scrollPercent = (scrollPosition / documentHeight) * 100
+      setScrollPercentage(scrollPercent)
     }
 
     window.addEventListener('scroll', updateScrollPercentage)
-    return () => {
-      window.removeEventListener('scroll', updateScrollPercentage)
-    }
+    return () => window.removeEventListener('scroll', updateScrollPercentage)
   }, [])
 
   const THICKNESS = '10px'
-  const COLORS = 'from-secondary-300 to-secondary-700'
+  const COLORS = 'from-secondary-400 to-secondary-700'
 
   const isHorizontal = direction === 'top'
 
