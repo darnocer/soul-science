@@ -2,6 +2,11 @@ const pageMetadata = {
   Home: {
     title: 'Home',
   },
+  About: {
+    title: 'About',
+    description:
+      'Darian is the founder of Soul Science Wellness, a transformational wellness company with emphasis on psychedelic medicine and mindfulness practices.',
+  },
   404: {
     title: '404 - Not Found',
     description: 'Oops!',
