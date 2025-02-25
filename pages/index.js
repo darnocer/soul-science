@@ -1,4 +1,5 @@
 import MetadataWrapper from '@/components/seo/MetadataWrapper'
+import pageContent from '@/data/pageContent'
 
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
@@ -8,6 +9,8 @@ const Hero = dynamic(() => import('@/components/blocks/Hero'), { ssr: false })
 const CardLayout = dynamic(() => import('@/components/listings/CardLayout'), { ssr: false })
 
 const PAGE_TITLE = 'Home'
+
+const content = pageContent.home
 
 export async function getStaticProps() {
   // const homeContent = await getSectionContent('home')
@@ -25,11 +28,11 @@ export default function Home({ posts }) {
       {typeof window !== 'undefined' && (
         <>
           <Hero
-            heading='Soul Signals'
-            subtitle='Microdoses of wisdom for soul searchers and truth seekers.'
-            description='Subscribe for short insights on healing and self-discovery.'
+            heading={content.hero.heading}
+            subtitle={content.hero.subtitle}
+            description={content.hero.description}
           />
-          <CardLayout posts={posts} heading='All Posts' />
+          <CardLayout posts={posts} heading={content.posts.heading} />
         </>
       )}
     </MetadataWrapper>

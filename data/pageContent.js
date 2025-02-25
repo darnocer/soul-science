@@ -1,4 +1,14 @@
 const pageContent = {
+  home: {
+    hero: {
+      heading: 'Soul Signals',
+      subtitle: 'Microdoses of wisdom for soul searchers and truth seekers.',
+      description: 'Subscribe for short insights on healing, awakening, and transformation.',
+    },
+    posts: {
+      heading: 'All Posts',
+    },
+  },
   newsletter: {
     blogTitle: 'Does this resonate?',
     blogDescription: 'Subscribe to occasionally get notified of new posts to your inbox.',
