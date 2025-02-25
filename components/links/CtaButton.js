@@ -17,7 +17,7 @@ const CtaButton = ({ action, text, link }) => {
   return (
     <Link
       href={link}
-      className='exclude-underline ease hover:pointer mb-4 mr-6 inline-flex items-center justify-center gap-2 rounded-md border
+      className='exclude-underline ease hover:pointer mb-4 inline-flex items-center justify-center gap-2 rounded-md border
                  border-gray-700 bg-white px-6 
        py-3 text-sm
                  font-semibold shadow-lg  
