@@ -13,7 +13,7 @@ import Tags from '@/components/links/Tags'
 
 const POSTS_PER_PAGE = 9
 
-export default function CardLayout({ posts, heading, description, level = 'h2' }) {
+export default function CardLayout({ posts, heading, description, level }) {
   const [searchValue, setSearchValue] = useState('')
   const [visiblePosts, setVisiblePosts] = useState(POSTS_PER_PAGE)
 
@@ -32,16 +32,16 @@ export default function CardLayout({ posts, heading, description, level = 'h2' }
 
   return (
     <SectionContainer padding='medium' container='large'>
-      <Heading>{heading}</Heading>
+      <Heading level={level}>{heading}</Heading>
       {/* <p className='font-medium text-gray-800 dark:text-gray-300'>{description}</p> */}
       <div className='space-y-4'>
         <div className='mb-10 space-y-2 text-center'>
           <div className='relative max-w-lg'>
             <input
-              aria-label='Search articles'
+              aria-label='Search posts'
               type='text'
               onChange={(e) => setSearchValue(e.target.value)}
-              placeholder='Search articles'
+              placeholder='Search posts'
               className='block w-full rounded-md border border-gray-300 bg-white px-4 py-2 font-medium text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-900 dark:bg-gray-800 dark:text-gray-100'
             />
             <SearchIcon />
