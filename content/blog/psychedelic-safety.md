@@ -1,6 +1,6 @@
 ---
 title: Psychedelic Safety & Best Practices
-summary: 
+summary: If you're going to do it, be safe about it.
 date: 2025-02-15
 aliases: 
 draft: false

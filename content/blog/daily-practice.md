@@ -1,6 +1,6 @@
 ---
-title: Never a Waste of Time
-summary: Daily spiritual practices
+title: Daily spiritual practices
+summary: These are never a waste of time.
 date: 2025-02-01
 aliases: 
 draft: false
