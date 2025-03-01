@@ -58,6 +58,13 @@ module.exports = withBundleAnalyzer({
       },
     ]
   },
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ['@svgr/webpack'],
+    })
+    return config
+  },
   // webpack: (config, { isServer }) => {
   //   console.log('Building with Webpack - isServer:', isServer)
 
