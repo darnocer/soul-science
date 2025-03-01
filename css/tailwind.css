@@ -231,7 +231,7 @@ ul > li:not(.no-arrow)::before {
 
   /* color: #2dd4bf !important; */
 
-  color: var(--secondary) !important;
+  color: var(--tertiary) !important;
 
   position: absolute;
 

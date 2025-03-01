@@ -5,7 +5,7 @@ import Badge from '@/components/links/Badge'
 
 const BlogSidebar = ({ author, tags, next, prev, type }) => {
   return (
-    <aside className='mt-6 rounded-md border bg-white p-4 dark:border-gray-700 dark:bg-black xl:sticky xl:top-24 xl:col-start-4 xl:row-span-2 xl:max-h-max'>
+    <aside className='mt-6 rounded-md border bg-white px-4 py-8 dark:border-gray-700 dark:bg-black xl:sticky xl:top-24 xl:col-start-4 xl:row-span-2 xl:max-h-max'>
       <div className='divide-y divide-gray-200 text-sm font-medium leading-5 dark:divide-gray-700'>
         {author && (
           <div className='py-4'>
