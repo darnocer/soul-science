@@ -11,7 +11,7 @@ content_type:
 tags:
   - health
 layout:
-  - PostSimple
+  - PostLayout
 image: test
 author: darian
 ---
