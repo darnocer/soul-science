@@ -12,7 +12,7 @@ export default function AuthorLayout({ children, frontMatter }) {
       <Heading level='h1'>About</Heading>
 
       <div className='items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0'>
-        <aside className='rounded-md border bg-white p-4 text-center dark:border-gray-700 dark:bg-black xl:sticky xl:top-24 xl:col-start-1 xl:row-span-2 xl:max-h-max'>
+        <aside className='mb-10 rounded-md border bg-white p-4 text-center dark:border-gray-700 dark:bg-black md:mb-0 xl:sticky xl:top-24 xl:col-start-1 xl:row-span-2 xl:max-h-max'>
           <Image src={avatar} alt='avatar' width='192' height='192' className='h-48 w-48 rounded-full' />
           <h4 className='pb-2 pt-4 text-2xl font-bold leading-8 tracking-tight'>{name}</h4>
           <div className='font-semibold text-gray-500 dark:text-gray-400'>{company}</div>

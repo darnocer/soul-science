@@ -17,19 +17,15 @@ export default function Footer() {
         </div>
 
         <div className='flex flex-col content-between'>
-          <nav className='m-0 flex justify-center text-sm font-medium text-gray-600 dark:text-gray-400 md:mr-6 md:justify-end'>
-            {footerNavLinks.map((link, index) => (
-              <React.Fragment key={link.href}>
-                <Link
-                  href={link.href}
-                  className='font-semibold uppercase transition-all duration-200 ease-in hover:text-gray-900 hover:underline dark:hover:text-gray-300'
-                >
-                  {link.title}
-                </Link>
-                {index < footerNavLinks.length - 1 && ( // Only add the pipe between links, not at the end
-                  <span className='mx-2 text-gray-500 dark:text-gray-400'>|</span>
-                )}
-              </React.Fragment>
+          <nav className='m-0 flex flex-col items-center space-y-2 text-sm font-medium text-gray-600 dark:text-gray-400 md:flex-row md:justify-end md:space-x-4 md:space-y-0'>
+            {footerNavLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className='font-semibold uppercase transition-all duration-200 ease-in hover:text-gray-900 hover:underline dark:hover:text-gray-300'
+              >
+                {link.title}
+              </Link>
             ))}
           </nav>
           <div className='mt-6 max-w-md'>
