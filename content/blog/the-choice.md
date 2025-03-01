@@ -25,7 +25,7 @@ This **Choice** alerts Spirit that you are ready to be a conscious participant i
 > All auspicious signs are in place. 
 > — Deng-Ming Dao in 365 Tao
 
-As part of making **The Choice**, we must also commit to [daily self-cultivation](/daily).
+As part of making **The Choice**, we must also commit to [daily self-cultivation](/daily-practice).
 
 Our practice is a subtractive process. By removing that which doesn't serve our greater purpose, it shortens the gap between where we are and our potential.
 

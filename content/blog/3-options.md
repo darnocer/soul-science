@@ -18,7 +18,7 @@ author: darian
 ---
 Are you happy? 
 
-It is human nature to strive for happiness. But we can't be happy all of the time. Happiness also isn't a destination we can [arrive](/arrive) at. 
+It is human nature to strive for happiness. But we can't be happy all of the time. [Happiness also isn't a destination](/no-destination) we can arrive at. 
 
 So a better question may be: _Are you content?_  Because contentment **is** a realistic goal. 
 

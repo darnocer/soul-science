@@ -22,7 +22,7 @@ Many of us are traumatized in one way or another by our religious experience gro
 
 As a former Christian, and as a former Atheist— I get it. But spirituality is not the same thing as religion. It is not belief in God or deities. 
 
-<span className="bold-underline">Spirituality</span> means acknowledging that we are all inextricably connected to something greater than ourselves. And a [spiritual practice](/daily) means tending to our non-physical selves, which is arguably just as important as our physical self. 
+<span className="bold-underline">Spirituality</span> means acknowledging that we are all inextricably connected to something greater than ourselves. And a [spiritual practice](/daily-practice) means tending to our non-physical selves, which is arguably just as important as our physical self. 
 
 There's a reason "mind, body, and spirit" are considered one. Yet in the West, we tend to treat only the physical body, ignoring the underlying spiritual causes of imbalance.
 
