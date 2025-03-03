@@ -99,7 +99,7 @@ Do not call everyone you know the day after taking psychedelics to tell them abo
 
 Do NOT make any life-altering decisions for _at least_ 2 weeks after the experience. The post-trip glow eventually fades, and you want to be grounded before making big choices that you may regret. 
 
-Take time for yourself after the experience. Ideally you have a full day, if not days, to rest, relax, and recharge. Spend some time meditating, if that's part of your [practice](/practice). And journal about your experience. 
+Take time for yourself after the experience. Ideally you have a full day, if not days, to rest, relax, and recharge. Spend some time meditating, if that's part of your [practice](/daily-practice). And journal about your experience. 
 
 **Integration** is a somewhat nebulous term that refers to the process of applying insights from your experience into everyday life. If you can glean at least one lesson you learned, and convert it into a small change that you can incorporate into your daily life, that is how lasting transformation is created. 
   

@@ -22,7 +22,7 @@ author: darian
 
 ## The Rise of Antidepressants
 
-The number of Americans taking antidepressants more than doubled in less than a decade from 13 million to 27 million— a 400% increase since 1988[^1]. Antidepressants are now the third most commonly prescribed drug in the US, generating over $11 billion in US sales annually[^2]— a number that is only increasing each year.
+The number of Americans taking antidepressants more than doubled in less than a decade from 13 million to 27 million— a _400%_ increase since 1988[^1]. Antidepressants are now the third most commonly prescribed drug in the US, generating over $11 billion in US sales annually[^2]— a number that is only increasing each year.
 
 This rapid increase in antidepressant prescriptions raises questions about the factors driving it:
 
@@ -83,6 +83,15 @@ However, several studies have established that lowering serotonin levels actuall
 In fact, research has shown that antidepressants are often no more effective than placebos in treating depression, particularly in mild to moderate cases. A meta-analysis published in the Journal of the American Medical Association found that the benefits of antidepressants over placebo were minimal or nonexistent in patients with mild to moderate depression[^8]. Yet, studies that challenge the effectiveness of prescription antidepressants are often overlooked or dismissed.
 
 While antidepressants can be beneficial—especially for those struggling to function in daily life—they don’t address the root causes of depression or the underlying emotional pain. Emerging research suggests that unprocessed emotions and trauma are stored in the body and can manifest not only as mental distress but also as physical symptoms[^9].
+
+## Trapped in the System
+
+Most people are prescribed antidepressants after only a brief conversation with their doctor, with little to no exploration of the underlying factors contributing to their depression. While these medications can provide immediate relief, helping individuals function in difficult times, there is rarely—if ever—any discussion of a long-term strategy or exit plan. Instead, the medication is presented as the final solution rather than a temporary support.
+
+Ideally, antidepressants would serve as a stepping stone to deeper healing, offering temporary relief while a patient builds the foundation for long-term well-being. Yet in practice, patients are simply told to take the pill indefinitely, without supporting treatment and little guidance on how to eventually taper off—if they’re even informed that doing so is possible.
+
+Conveniently, this approach ensures a steady stream of revenue for the healthcare system and pharmaceutical companies, while the patient’s underlying issues remain unaddressed. Rather than being empowered to reclaim their mental health, they are conditioned to believe they will always need the drug to keep depression symptoms away. They are left dependent and reliant on a defunct system that offers no real path forward, and no clear way out. 
+
 
 ## Breaking Free
 

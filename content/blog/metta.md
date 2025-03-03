@@ -23,13 +23,18 @@ image: heart
 ## Overview 
 <span className="bold-underline">Metta</span>, or "Loving-Kindness", is a powerful form of meditation practice rooted in cultivating compassion and goodwill. It involves repeating the _Metta phrases_ repeatedly for different categories of people, concentrating on the meaning. 
 
-### The Metta Phrases:
+## Instructions 
+Always beginning by directing loving-kindness towards yourself,  you will repeat the _Metta phrases_ (see [below](#metta-phrases)) in order, focusing on the meaning behind the words and the chosen person for the given category. You are not forcing feelings of loving-kindness, you are simply concentrating on the phrases and allowing feelings of Metta to develop naturally over time. 
+
+If you are just beginning with Metta, dedicate an entire session, or multiple sessions, solely to cultivating Metta for yourself before progressing to the other categories (see [categories below](#metta-categories)). Once you feel ready to move on, still always start each session by offering Metta to yourself even for a few minutes in order to "connect" before shifting focus to the next category.
+
+### Metta Phrases
 > 1. May you be safe 🙏🏼
 > 2. May you be happy 🙏🏼
 > 3. May you be healthy 🙏🏼
 > 4. May you be at ease 🙏🏼
 
-### Metta Categories:
+### Metta Categories
 1. **Self** - You!
 2. **Benefactor** - A teacher, mentor, or someone you look up to
 3. **'Dear Friend'** - Someone very close to you 
@@ -37,10 +42,6 @@ image: heart
 5. **A difficult person** - Someone in your life whom you have a challenging relationship with, or feelings of aversion or resentment towards. This could be a colleague, family member, or even a public figure or politician. (Remember, there are NO exceptions!)
 6. **All Beings** - All Beings in existence every where. (See more details about working with this category in the section [below](#working-with-all-beings)).
 
-## Instructions 
-Always beginning by directing loving-kindness towards yourself,  you will repeat the _Metta phrases_ in order, focusing on the meaning behind the words. You are not forcing feelings of loving-kindness, you are simply concentrating on the phrases and allowing feelings of Metta to develop naturally over time. 
-
-If you are just beginning with Metta, dedicate an entire session, or multiple sessions, solely to cultivating Metta for yourself before progressing to the other categories. Once you feel ready to move on, still always start each session by offering Metta to yourself even for a few minutes in order to "connect" before shifting focus to the next category.
 
 ### Guidelines for Choosing Recipients of Metta
 - Trust your intuition when selecting someone for each Metta category— avoid overthinking here.

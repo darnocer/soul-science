@@ -18,9 +18,9 @@ author: darian
 ---
 Meditation, prayer, and self-inquiry are NEVER a waste of time. You may feel as if you _should_ be doing something else. This very feeling reinforces the need to spend more time in one of these spiritual practices:
 
-- **Meditation:** Sitting in silence, observing thoughts without judgement. It doesn't need to be a big thing. Mindfulness can be [a simple practice](/simple-practice ). 
+- **Meditation:** Sitting in silence, observing thoughts without judgement. It doesn't need to be a big thing. Mindfulness can be [a simple practice](/simple-practice). 
 - **Prayer:** Prayer doesn't need to be to "God" or a specific god, you can simply pray to yourself or send it out to the Universe. A simple prayer template is: _help_ (something you need help with), _thanks_ (gratitude), _wow_ (awe and amazement). 
-- **Self-Inquiry:** This is honest reflection and contemplation about yourself, your behavior, and your actions. 
+- **Self-Inquiry:** This is honest reflection and contemplation about yourself, your behavior, and your actions. You can journal your reflections or contemplate them silently to yourself.
 
 Pick one of these practices, and make [The Choice](/the-choice) to commit to doing your practice daily. 
 
