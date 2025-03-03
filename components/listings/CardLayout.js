@@ -54,7 +54,7 @@ export default function CardLayout({ posts, heading, description, level }) {
           ) : (
             displayPosts.map((post) => {
               const { slug, date, title, summary, image, author, tags } = post
-              const imagePath = `/static/images/featured/${image}.png`
+              const imagePath = `/static/images/featured/${image}.jpg`
 
               return (
                 <Link key={slug} href={`/${slug}`} className='block'>
