@@ -13,7 +13,7 @@ tags:
   - consciousness
 layout:
   - PostLayout
-image: test
+image: who
 author: darian
 ---
 Can you answer this question?

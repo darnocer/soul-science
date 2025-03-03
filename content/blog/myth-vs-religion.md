@@ -10,7 +10,7 @@ draft: false
 layout:
   - PostLayout
 content_type: musing
-image: test
+image: prometheus
 author: darian
 ---
 There is a fine line between _mythology_ and _religion_. This is not to suggest that religion is illegitimate, but rather to recognize the legitimacy of both mythology and religions as meaningful ways to understand the world. 

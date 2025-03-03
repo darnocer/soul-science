@@ -13,7 +13,7 @@ tags:
 layout:
   - PostLayout
 author: darian
-image: test
+image: choice
 ---
 
 

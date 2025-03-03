@@ -13,7 +13,7 @@ tags:
   - practice
 layout:
   - PostLayout
-image: test
+image: abstract1
 author: darian
 ---
 

@@ -12,7 +12,7 @@ tags:
   - health
 layout:
   - PostLayout
-image: test
+image: pharm
 author: darian
 ---
 

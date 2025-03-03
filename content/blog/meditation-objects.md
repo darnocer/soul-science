@@ -12,7 +12,7 @@ tags:
   - mindfulness
 layout:
   - PostLayout
-image: test
+image: bowl
 author: darian
 ---
 There are many forms of meditation, and though advanced practitioners may use other techniques, meditation will almost always involve a **"meditation object"**. 

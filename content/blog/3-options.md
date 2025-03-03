@@ -13,7 +13,7 @@ tags:
   - happiness
 layout:
   - PostLayout
-image: test
+image: options
 author: darian
 ---
 Are you happy? 

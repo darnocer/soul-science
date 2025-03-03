@@ -13,7 +13,7 @@ tags:
   - practice
 layout:
   - PostLayout
-image: test
+image: prayer
 author: darian
 ---
 Meditation, prayer, and self-inquiry are NEVER a waste of time. You may feel as if you _should_ be doing something else. This very feeling reinforces the need to spend more time in one of these spiritual practices:

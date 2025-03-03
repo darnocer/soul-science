@@ -12,7 +12,7 @@ content_type:
   - musing
 layout:
   - PostLayout
-image: test
+image: cosmos1
 author: darian
 ---
 

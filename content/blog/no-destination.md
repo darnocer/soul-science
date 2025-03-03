@@ -13,7 +13,7 @@ tags:
   - happiness
 layout:
   - PostLayout
-image: test
+image: destination
 author: darian
 ---
 Happiness is not an aspiration for a future state, nor is it a state we can arrive at permanently. It's only ever possible to be happy in the present moment— right <span className="bold-underline">NOW</span>.

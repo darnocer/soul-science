@@ -14,7 +14,7 @@ tags:
 layout:
   - PostLayout
 author: darian
-image: test
+image: awareness
 ---
 Awareness, awareness, awareness!
 
