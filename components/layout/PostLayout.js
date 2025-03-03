@@ -1,6 +1,7 @@
 'use client'
 
 import { useMemo } from 'react'
+import Image from 'next/image'
 
 import SectionContainer from '@/components/layout/SectionContainer'
 import { BlogSEO } from '@/components/seo/SEO'
@@ -14,7 +15,9 @@ import { BlogNewsletterForm } from '@/components/blocks/NewsletterForm'
 import ScrollIndicator from '@/components/post/ScrollIndicator'
 
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {
-  const { slug, fileName, date, title, images, tags, summary, content_type, author } = frontMatter
+  const { slug, fileName, date, title, image, tags, summary, content_type, author } = frontMatter
+
+  const imagePath = image ? `/static/images/featured/${image}.jpg` : `/static/images/featured/default.png`
 
   return (
     <>
@@ -31,16 +34,11 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
               style={{ gridTemplateRows: 'auto 1fr' }}
             >
               <BlogSidebar type={content_type} author={author} tags={tags} next={next} prev={prev} />
-              <main className=' xl:col-span-3 xl:row-span-2 xl:pb-0'>
-                <div className='prose max-w-none pb-6 pt-10 font-serif dark:prose-dark'>{children}</div>
-                {/* <div className='pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300'>
-                <Link href={discussUrl(slug)} rel='nofollow'>
-                  {'Discuss on Twitter'}
-                </Link>
-                {` • `}
-                <Link href={editUrl(fileName)}>{'View on GitHub'}</Link>
-              </div>
-              <Comments frontMatter={frontMatter} /> */}
+              <main className='xl:col-span-3 xl:row-span-2 xl:pb-0'>
+                <div className='relative mb-6 mt-6 aspect-[16/9] w-full overflow-hidden rounded-lg'>
+                  <Image src={imagePath} alt={title} fill className='object-cover' priority />
+                </div>
+                <div className='prose max-w-none pb-6 font-serif dark:prose-dark'>{children}</div>
                 <BlogNewsletterForm />
               </main>
             </div>

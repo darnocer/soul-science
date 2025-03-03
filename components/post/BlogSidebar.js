@@ -39,7 +39,7 @@ const BlogSidebar = ({ author, tags, next, prev, type }) => {
             {next && (
               <div className='pb-4 xl:border-b xl:border-gray-200 xl:dark:border-gray-700'>
                 <span className='text-xs uppercase tracking-wide text-gray-600 dark:text-gray-400'>Next Article:</span>
-                <div className='mt-2 font-semibold text-primary-500 hover:text-primary-600 dark:hover:text-primary-400'>
+                <div className='mt-2 font-semibold capitalize text-primary-500 hover:text-primary-600 dark:hover:text-primary-400'>
                   <LinkArrow direction='right' href={`/${next.slug}`} text={next.title} />
                 </div>
               </div>
@@ -49,7 +49,7 @@ const BlogSidebar = ({ author, tags, next, prev, type }) => {
                 <span className='text-xs uppercase tracking-wide text-gray-600 dark:text-gray-400'>
                   Previous Article:
                 </span>
-                <div className='mt-2 text-primary-500 hover:text-primary-600 dark:hover:text-primary-400'>
+                <div className='mt-2 capitalize text-primary-500 hover:text-primary-600 dark:hover:text-primary-400'>
                   <LinkArrow direction='left' href={`/${prev.slug}`} text={prev.title} />
                 </div>
               </div>
