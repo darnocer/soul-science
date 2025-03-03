@@ -21,7 +21,7 @@ export default function BlogCard({ post }) {
 
   return (
     <Link href={`/${slug}`} className='block'>
-      <article className='group flex h-full cursor-pointer flex-col rounded-lg border border-gray-200 bg-white shadow-md transition-all duration-300 hover:bg-gray-150 hover:shadow-lg dark:border-gray-700 dark:bg-black dark:hover:border-gray-300/60 dark:hover:bg-gray-850'>
+      <article className='group flex h-full cursor-pointer flex-col rounded-lg border border-gray-200 bg-white shadow-md transition-all duration-300 hover:cursor-pointer hover:bg-gray-150 hover:shadow-lg dark:border-gray-700 dark:bg-black dark:hover:border-gray-300/60 dark:hover:bg-gray-850'>
         <div className='relative h-40 w-full overflow-hidden rounded-t-lg'>
           {imageSrc ? (
             <Image
