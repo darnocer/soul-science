@@ -1,15 +1,11 @@
 'use client'
 
-import Image from 'next/image'
 import { useState } from 'react'
-import formatDate from '@/lib/utils/formatDate'
 import SectionContainer from '@/components/layout/SectionContainer'
 import Heading from '@/components/headings/Heading'
 import Button from '@/components/links/Button'
-import Link from '@/components/links/Link'
 import SearchIcon from '@/components/icons/ui/SearchIcon'
-import Author from '@/components/post/Author'
-import Tags from '@/components/links/Tags'
+import BlogCard from '@/components/listings/BlogCard'
 
 const POSTS_PER_PAGE = 9
 
@@ -33,7 +29,6 @@ export default function CardLayout({ posts, heading, description, level }) {
   return (
     <SectionContainer padding='medium' container='large'>
       <Heading level={level}>{heading}</Heading>
-      {/* <p className='font-medium text-gray-800 dark:text-gray-300'>{description}</p> */}
       <div className='space-y-4'>
         <div className='mb-10 space-y-2 text-center'>
           <div className='relative max-w-lg'>
@@ -52,44 +47,7 @@ export default function CardLayout({ posts, heading, description, level }) {
           {displayPosts.length === 0 ? (
             <p className='text-center font-semibold text-gray-600 dark:text-gray-400'>No posts found.</p>
           ) : (
-            displayPosts.map((post) => {
-              const { slug, date, title, summary, image, author, tags } = post
-              const imagePath = `/static/images/featured/${image}.jpg`
-
-              return (
-                <Link key={slug} href={`/${slug}`} className='block'>
-                  <article className='group flex h-full cursor-pointer flex-col rounded-lg border border-gray-200 bg-white shadow-md transition-all duration-300 hover:bg-gray-150 hover:shadow-lg dark:border-gray-700 dark:bg-black dark:hover:border-gray-300/60 dark:hover:bg-gray-850'>
-                    <div className='relative h-40 w-full overflow-hidden rounded-t-lg'>
-                      <Image
-                        src={imagePath}
-                        alt={title}
-                        layout='fill'
-                        objectFit='cover'
-                        className='transform transition-transform duration-300 ease-in-out group-hover:scale-105'
-                      />
-                    </div>
-                    <div className='flex flex-grow flex-col p-4'>
-                      {/* <time
-                        dateTime={date}
-                        className='text-xxs font-semibold uppercase text-gray-600 dark:text-gray-500'
-                      >
-                        {formatDate(date)}
-                      </time> */}
-
-                      <Tags tags={tags} />
-
-                      <h3 className='mt-2 text-xl font-bold text-gray-900 dark:text-gray-200'>{title}</h3>
-                      <p className='mt-2 flex-grow text-sm font-medium text-gray-700 dark:text-gray-400'>{summary}</p>
-                      {author && (
-                        <div className='mt-4'>
-                          <Author author={author} />
-                        </div>
-                      )}
-                    </div>
-                  </article>
-                </Link>
-              )
-            })
+            displayPosts.map((post) => <BlogCard key={post.slug} post={post} />)
           )}
         </div>
 
