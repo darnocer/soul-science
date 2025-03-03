@@ -229,9 +229,7 @@ ul > li:not(.no-arrow) {
 ul > li:not(.no-arrow)::before {
   content: '\279C'; /* This is the unicode for the arrow symbol */
 
-  /* color: #2dd4bf !important; */
-
-  color: var(--tertiary) !important;
+  color: var(--secondary) !important;
 
   position: absolute;
 
@@ -253,6 +251,7 @@ h5 .list-heading {
   line-height: 1.5;
   display: flex;
   align-items: center;
+  margin-bottom: 5px;
 }
 
 h2 .list-heading::before,
@@ -263,20 +262,19 @@ h5 .list-heading::before {
   counter-increment: h-counter;
   position: absolute;
   left: -5px;
-  top: 0.5px;
+  top: 50%;
+  transform: translateY(-50%);
   background: var(--secondary);
   color: var(--gray-900);
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   text-align: center;
-  line-height: 1.5;
+  line-height: 30px;
   font-weight: bold;
 }
 
-/* Optional: Reset the counter at the start of a new section or container */
-
-.section {
+main {
   counter-reset: h-counter;
 }
 

@@ -33,7 +33,7 @@ const sharedTypographyStyles = {
         fontFamily: 'Edu',
         fontSize: '1.4rem',
         lineHeight: '100%',
-        color: customColors.secondary[700],
+        color: customColors.accent[500],
       },
       // headings
       h1: {
