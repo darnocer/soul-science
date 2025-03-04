@@ -11,7 +11,7 @@ export default function PostHeader({ title, summary, date }) {
           <Breadcrumbs />
         </div>
 
-        <div className='flex items-center justify-center gap-x-2'>
+        {/* <div className='flex items-center justify-center gap-x-2'>
           {date ? (
             <dl>
               <div>
@@ -22,7 +22,7 @@ export default function PostHeader({ title, summary, date }) {
               </div>
             </dl>
           ) : null}
-        </div>
+        </div> */}
         <div className='m-auto max-w-xl'>
           <PageTitle>{title}</PageTitle>
         </div>
