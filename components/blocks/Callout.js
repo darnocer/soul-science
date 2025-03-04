@@ -15,7 +15,7 @@ const Callout = ({ type = 'info', text, title = 'Summary' }) => {
   const formatText = (inputText) => parse(inputText.replace(/`([^`]+)`/g, "<code className='inline-code'>$1</code>"))
 
   return (
-    <div className='callout not-prose mb-8 mt-8 rounded-md border-2 border-accent-500 bg-white p-4 font-sans text-accent-600 shadow-lg dark:border-accent-400 dark:bg-black dark:text-accent-400'>
+    <div className='callout not-prose mb-8 mt-8 rounded-md border-2 border-accent-700 bg-white p-4 font-sans text-accent-700 shadow-lg dark:border-accent-400 dark:bg-black dark:text-accent-400'>
       <div className='flex items-center'>
         <div className='mr-2'>{icon}</div>
         <p className='text-md mt-1 font-bold'>{title}</p>

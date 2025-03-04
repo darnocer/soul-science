@@ -10,8 +10,8 @@ export default function Hero({ heading, subtitle, description }) {
       <h1 className='mt-6 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 md:text-5xl lg:text-6xl'>
         {heading}
       </h1>
-      <p className='mt-4 max-w-2xl text-xl font-semibold text-gray-500 dark:text-gray-200'>{subtitle}</p>
-      <p className='mt-4 max-w-2xl text-base font-medium text-gray-600 dark:text-gray-300'>{description}</p>
+      <p className='mt-4 max-w-2xl text-xl font-semibold text-gray-600 dark:text-gray-200'>{subtitle}</p>
+      <p className='mt-4 max-w-2xl text-base font-medium text-gray-700 dark:text-gray-300'>{description}</p>
       <div className='mt-6 w-full max-w-md'>
         <NewsletterForm />
       </div>

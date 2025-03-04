@@ -73,7 +73,7 @@ const NewsletterForm = ({ title, description, disclaimer = false }) => {
                 <span className='sr-only'>Email address</span>
                 <input
                   autoComplete='email'
-                  className='min-h-[50px] w-full rounded-md border-gray-400/40 px-4 text-base font-medium focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary-600 dark:bg-black md:min-h-full'
+                  className='min-h-[50px] w-full rounded-md border-gray-900 px-4 text-base font-medium shadow-md focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary-600 dark:border-gray-400/40 dark:bg-black md:min-h-full'
                   id='email-input'
                   name='email'
                   placeholder={content.placeholder}
@@ -88,7 +88,7 @@ const NewsletterForm = ({ title, description, disclaimer = false }) => {
                 <button
                   className={`exclude-underline ease hover:pointer mb-0 inline-flex w-full items-center justify-center whitespace-nowrap rounded-md border px-6 py-3 text-sm font-semibold uppercase shadow-md transition-all duration-200 hover:no-underline focus:outline-none focus:ring-2 focus:ring-primary-600 focus:ring-offset-2 disabled:cursor-not-allowed dark:ring-offset-black md:py-4 ${
                     subscribed
-                      ? 'cursor-not-allowed border-gray-600 bg-gray-600/60 text-gray-800 dark:border-gray-600 dark:text-white'
+                      ? 'cursor-not-allowed border-gray-800 bg-gray-600/60 text-gray-800 dark:border-gray-600 dark:text-white'
                       : 'border-primary-600 bg-primary-600 text-white hover:border-primary-500 hover:bg-primary-400 dark:bg-primary-600 dark:text-white dark:hover:border-primary-700 dark:hover:bg-primary-700'
                   } `}
                   type='submit'
@@ -143,7 +143,7 @@ export const BlogNewsletterForm = ({
   disclaimer = true,
 }) => (
   <div className='mt-6 flex items-center justify-center'>
-    <div className='mx-0 w-full rounded-md border bg-gray-100 px-6 py-8 dark:border-gray-600/60 dark:bg-black md:mx-6'>
+    <div className='mx-0 w-full rounded-md border border-gray-900 bg-gray-100 px-6 py-8 dark:border-gray-600/60 dark:bg-black md:mx-6'>
       <NewsletterForm title={title} description={description} disclaimer={disclaimer} />
     </div>
   </div>
