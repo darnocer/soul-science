@@ -33,7 +33,7 @@ const sharedTypographyStyles = {
         fontFamily: 'Edu',
         fontSize: '1.4rem',
         lineHeight: '100%',
-        color: customColors.accent[500],
+        color: customColors.secondary[500],
       },
       // headings
       h1: {
@@ -109,7 +109,7 @@ const sharedTypographyStyles = {
         color: colors.gray[800],
       },
       blockquote: {
-        borderLeftColor: customColors.secondary[700],
+        borderLeftColor: customColors.accent[700],
         color: colors.gray[700],
       },
     },

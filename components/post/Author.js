@@ -10,7 +10,7 @@ const Author = ({ author }) => {
     return (
       <div className='flex items-center space-x-3'>
         <Image src={authorData.avatar} alt={authorData.name} width={28} height={28} className='rounded-full' />
-        <span className='text-xs font-semibold text-primary-700 dark:text-primary-700'>{authorData.name}</span>
+        <span className='text-tertiary-800 dark:text-tertiary-800 text-xs font-semibold'>{authorData.name}</span>
       </div>
     )
   }
@@ -21,7 +21,7 @@ const Author = ({ author }) => {
         {author.avatar && (
           <Image src={author.avatar} alt={author.name} width={28} height={28} className='rounded-full' />
         )}
-        <span className='text-xs font-semibold text-primary-500 dark:text-primary-700'>{author.name}</span>
+        <span className='text-tertiary-800 dark:text-tertiary-800 text-xs font-semibold'>{author.name}</span>
       </div>
     )
   }

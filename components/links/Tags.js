@@ -9,7 +9,7 @@ const Tags = ({ tags }) => {
       {tags.map((text, index) => (
         <span key={text} className='inline'>
           <Link href={`/tags/${kebabCase(text)}`} passHref>
-            <span className='font-sans text-primary-500 duration-100 ease-in hover:text-primary-600 dark:hover:text-primary-300'>
+            <span className='font-sans text-tertiary-500 duration-100 ease-in hover:text-tertiary-600 dark:hover:text-tertiary-300'>
               #{text.split(' ').join('-')}
             </span>
           </Link>

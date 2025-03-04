@@ -22,7 +22,7 @@ export default function Footer() {
               <Link
                 key={link.href}
                 href={link.href}
-                className='font-semibold uppercase transition-all duration-200 ease-in hover:text-gray-900 hover:underline dark:hover:text-gray-300'
+                className='font-semibold uppercase underline transition-all duration-200 ease-in hover:text-gray-900 hover:underline dark:hover:text-gray-300'
               >
                 {link.title}
               </Link>

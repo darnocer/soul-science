@@ -89,7 +89,7 @@ const NewsletterForm = ({ title, description, disclaimer = false }) => {
                   className={`exclude-underline ease hover:pointer mb-0 inline-flex w-full items-center justify-center whitespace-nowrap rounded-md border px-6 py-3 text-sm font-semibold uppercase shadow-md transition-all duration-200 hover:no-underline focus:outline-none focus:ring-2 focus:ring-primary-600 focus:ring-offset-2 disabled:cursor-not-allowed dark:ring-offset-black md:py-4 ${
                     subscribed
                       ? 'cursor-not-allowed border-gray-600 bg-gray-600/60 text-gray-800 dark:border-gray-600 dark:text-white'
-                      : 'border-primary-600 bg-primary-500 text-white hover:border-primary-500 hover:bg-primary-400 dark:bg-primary-500 dark:text-white dark:hover:border-primary-600 dark:hover:bg-primary-600'
+                      : 'border-primary-600 bg-primary-600 text-white hover:border-primary-500 hover:bg-primary-400 dark:bg-primary-600 dark:text-white dark:hover:border-primary-700 dark:hover:bg-primary-700'
                   } `}
                   type='submit'
                   disabled={subscribed}

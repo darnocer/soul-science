@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --tertiary: #39b4c4;
-  --secondary: #b78000;
-  --primary: #30a185;
-  --accent: #b93f3f;
+  --tertiary: #39b2da;
+  --secondary: #f63e95;
+  --primary: #51c585;
+  --accent: #fcdf01;
   --gray-100: #ffffff;
   --gray-200: #e6e6e6;
   --gray-300: #cdcccc;
@@ -176,7 +176,7 @@ a[id^='user-content-fnref-']::after {
 
   text-decoration: underline;
 
-  text-decoration-color: var(--primary);
+  text-decoration-color: var(--tertiary);
 
   text-decoration-thickness: 4px;
 
@@ -229,7 +229,7 @@ ul > li:not(.no-arrow) {
 ul > li:not(.no-arrow)::before {
   content: '\279C'; /* This is the unicode for the arrow symbol */
 
-  color: var(--secondary) !important;
+  color: var(--accent) !important;
 
   position: absolute;
 
@@ -264,7 +264,7 @@ h5 .list-heading::before {
   left: -5px;
   top: 50%;
   transform: translateY(-50%);
-  background: var(--secondary);
+  background: var(--accent);
   color: var(--gray-900);
   width: 30px;
   height: 30px;

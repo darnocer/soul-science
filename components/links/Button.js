@@ -8,7 +8,7 @@ const Button = ({ text, link, onClick, type = 'primary' }) => {
 
   const secondaryClasses = `bg-white border-gray-700 hover:border-gray-500 hover:bg-gray-100 dark:border-gray-300/30 dark:bg-black dark:hover:border-gray-400/40 dark:hover:bg-gray-850`
 
-  const primaryClasses = `bg-primary-500 border-primary-600 text-white hover:border-primary-500 hover:bg-primary-400 dark:bg-primary-800 dark:border-primary-600 dark:hover:bg-primary-700 dark:hover:border-primary-600`
+  const primaryClasses = `bg-primary-600 border-primary-700 text-white hover:border-primary-600 hover:bg-primary-400 dark:bg-primary-800 dark:border-primary-600 dark:hover:bg-primary-700 dark:hover:border-primary-600`
 
   const buttonClasses = `${commonClasses} ${type === 'secondary' ? secondaryClasses : primaryClasses}`
 

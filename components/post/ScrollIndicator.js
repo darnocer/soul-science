@@ -17,7 +17,7 @@ const ScrollIndicator = ({ direction = 'left' }) => {
   }, [])
 
   const THICKNESS = '10px'
-  const COLORS = 'from-secondary-400 to-secondary-700'
+  const COLORS = 'from-accent-400 to-accent-700'
 
   const isHorizontal = direction === 'top'
 
