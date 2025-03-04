@@ -19,8 +19,8 @@ import CtaButton from '@/components/links/CtaButton'
 import Status from '@/components/flare/Status'
 import Testimonial from '@/components/blocks/Testimonial'
 import CardGrid from '@/components/blocks/CardGrid'
-import Breadcrumbs from './links/Breadcrumbs'
-import TimeOfDayText from './flare/TimeOfDayText'
+import Breadcrumbs from '@/components/links/Breadcrumbs'
+import TimeOfDayText from '@/components/flare/TimeOfDayText'
 
 export const MDXComponents = {
   Image,
