@@ -21,9 +21,14 @@ The main difference is not in substance, but perspective. A religion is a living
 
 Throughout history, mystics have recognized that the ultimate nature of reality cannot easily be captured with words, which is why both mythology and religions rely on symbols, allegories, and parables to express deep truths. Dismissing mythology while embracing religion overlooks that the same profound, symbolic storytelling is contained in both. 
 
-Many myths have parallels to religious stories and strikingly similar themes, reflecting humanity's attempts to understand existence. In the Egyptian myth of **Osiris**, he is betrayed, killed, and resurrected, paralleling **Jesus's** crucifixion and resurrection. The Greek myth of **Prometheus**, who stole fire from the gods to enlighten humanity and was punished, mirrors the story of **Adam and Eve**, where gaining forbidden knowledge leads to both enlightenment and suffering. These parallels, whether labeled mythology or religion, serve the same purpose— to convey deep truths about knowledge, existence, and the nature of reality. 
+Many myths have parallels to religious stories and strikingly similar themes, reflecting humanity's attempts to understand existence: 
+- In the Egyptian myth of **Osiris**, he is betrayed, killed, and resurrected, paralleling **Jesus's** crucifixion and resurrection. 
+- In the Greek myth of **Prometheus**, he stole fire from the gods to enlighten humanity and was punished, which mirrors the story of **Adam and Eve**, where gaining forbidden knowledge leads to both enlightenment and suffering. 
+- In the Aztec myth of **Quetzalcoatl**, he is a god who takes human form, brings wisdom, is associated with a virgin birth, and promises to return, paralleling **Jesus’s** teachings, sacrifice, and Second Coming.
 
-By studying mythology with the same reverence as religion, we can broaden our perspective of how humanity has grappled with the mystery of the unknown throughout all of history. While some may dismiss both as fiction, these sacred stories transcend time, offering wisdom that helps us shape our understanding of the ourselves and the world.
+These are only a handful of countless examples. But these parallels, whether labeled mythology or religion, serve the same purpose— to convey deep truths about knowledge, existence, and the nature of reality. 
+
+By studying mythology with the same reverence as religion, we can broaden our perspective of how humanity has grappled with the mystery of the unknown throughout all of history. While some may dismiss both as fiction, the fact is these sacred stories transcend time and offer wisdom that can help us shape our understanding of ourselves and the world. 
 
 
 
