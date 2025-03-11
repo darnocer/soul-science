@@ -1,5 +1,9 @@
 const footerNavLinks = [
   {
+    title: 'All Posts',
+    href: '/posts',
+  },
+  {
     title: 'About',
     href: '/about',
   },
