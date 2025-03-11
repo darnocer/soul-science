@@ -1,6 +1,6 @@
 ---
 title: Working with Objects of Meditation
-summary: Strategies to connect with the present moment.
+summary: Anchors of focus for meditation practice.
 date: 2025-02-05
 aliases: 
 draft: false
