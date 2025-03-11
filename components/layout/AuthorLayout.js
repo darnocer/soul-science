@@ -5,7 +5,7 @@ import Heading from '@/components/headings/Heading'
 import CtaButton from '@/components/links/CtaButton'
 
 export default function AuthorLayout({ children, frontMatter }) {
-  const { name, avatar, company, email, linkedin, bio, medium, website } = frontMatter
+  const { name, avatar, company, email, linkedin, bio, medium, website, x } = frontMatter
 
   return (
     <div className='mx-auto max-w-5xl'>
@@ -21,6 +21,7 @@ export default function AuthorLayout({ children, frontMatter }) {
             <SocialIcon kind='mail' href={`mailto:${email}`} />
             <SocialIcon kind='linkedin' href={linkedin} />
             <SocialIcon kind='medium' href={medium} />
+            <SocialIcon kind='x' href={x} />
           </div>
           {bio ? <div className='mb-8 pt-4  text-sm font-medium text-gray-500 dark:text-gray-300'>{bio}</div> : null}
           <CtaButton text='Schedule 30 Minutes' action='schedule' link='https://calendly.com/soul-science/30' />
