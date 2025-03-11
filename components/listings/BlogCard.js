@@ -5,9 +5,10 @@ import Image from 'next/image'
 import Link from '@/components/links/Link'
 import Tags from '@/components/links/Tags'
 import Author from '@/components/post/Author'
+import Badge from '@/components/links/Badge'
 
-export default function BlogCard({ post }) {
-  const { slug, title, summary, image, author, tags } = post
+export default function BlogCard({ post, badge = false }) {
+  const { slug, title, summary, image, author, tags, content_type } = post
   const [imageSrc, setImageSrc] = useState(null)
 
   useEffect(() => {
@@ -35,8 +36,13 @@ export default function BlogCard({ post }) {
           ) : (
             <div className='h-full w-full animate-pulse bg-gray-200 dark:bg-gray-800'></div>
           )}
+          {badge && (
+            <div className='absolute right-2 top-2 z-10'>
+              <Badge text={content_type} />
+            </div>
+          )}
         </div>
-        <div className='flex flex-grow flex-col p-4'>
+        <div className='flex flex-grow flex-col gap-2 p-4'>
           <Tags tags={tags} />
           <h3 className='mt-2 text-xl font-bold text-gray-900 dark:text-gray-200'>{title}</h3>
           <p className='mt-2 flex-grow text-sm font-medium text-gray-700 dark:text-gray-400'>{summary}</p>

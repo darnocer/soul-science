@@ -9,7 +9,7 @@ import BlogCard from '@/components/listings/BlogCard'
 
 const POSTS_PER_PAGE = 9
 
-export default function CardLayout({ posts, heading, description, level }) {
+export default function CardLayout({ posts, heading, description, level, badge = false }) {
   const [searchValue, setSearchValue] = useState('')
   const [visiblePosts, setVisiblePosts] = useState(POSTS_PER_PAGE)
 
@@ -47,7 +47,7 @@ export default function CardLayout({ posts, heading, description, level }) {
           {displayPosts.length === 0 ? (
             <p className='text-center font-semibold text-gray-600 dark:text-gray-400'>No posts found.</p>
           ) : (
-            displayPosts.map((post) => <BlogCard key={post.slug} post={post} />)
+            displayPosts.map((post) => <BlogCard key={post.slug} post={post} badge={badge} />)
           )}
         </div>
 

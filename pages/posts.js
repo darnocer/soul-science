@@ -29,6 +29,7 @@ export default function Blog({ posts, initialDisplayPosts, pagination }) {
         heading={pageContent.posts.title}
         level='h1'
         description={pageContent.posts.description}
+        badge={true}
       />
     </MetadataWrapper>
   )
