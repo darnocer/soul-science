@@ -1,7 +1,8 @@
 const siteMetadata = {
   title: 'Soul Science Wellness',
   author: 'Darian',
-  description: 'Subscribe to the Soul Signals newsletter for short insights on healing, awakening, and transformation.',
+  description:
+    'Subscribe to the Soul Signals newsletter for short insights on discovering meaning, purpose, and fulfillment.',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://www.soul-science.com',
@@ -12,7 +13,7 @@ const siteMetadata = {
   website: 'https://www.dnocera.com',
   email: 'darian@soul-science.com',
   github: 'https://github.com/darnocer',
-  twitter: null,
+  twitter: 'https://x.com/soulscience101',
   facebook: null,
   youtube: null,
   linkedin: 'https://www.linkedin.com/in/darian-nocera',

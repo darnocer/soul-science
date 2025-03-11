@@ -2,11 +2,16 @@ const pageContent = {
   home: {
     hero: {
       heading: 'Soul Signals',
-      subtitle: 'Microdoses of wisdom for soul searchers and truth seekers.',
-      description: 'Subscribe for short insights on healing, awakening, and transformation.',
+      subtitle: 'Microdoses of wisdom for soul searchers.',
+      description: 'Subscribe for insights related to discovering meaning, purpose, and fulfillment.',
     },
     posts: {
-      heading: 'All Posts',
+      micro: {
+        heading: 'Microdoses',
+      },
+      macro: {
+        heading: 'Macrodoses',
+      },
     },
   },
   newsletter: {
