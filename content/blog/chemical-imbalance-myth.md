@@ -45,7 +45,6 @@ The "biomedicine model" of mental health gained popularity in Western medicine i
 However, this line of thinking often overshadows the complex interactions of biological, psychological, and social factors that contribute to an individual's mental well-being, which potentially limits patients' access to effective alternative treatments, hindering their ability to achieve true long-term healing.
 
 Research by the Centers for Disease Control and Prevention has shown that[^3]:
-
 - one in five Americans was sexually molested as a child
 - one in four was beaten by a parent to the point of a mark being left on their body
 - one in three couples engages in physical violence
