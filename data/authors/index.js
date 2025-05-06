@@ -1,7 +1,7 @@
 const authors = {
   darian: {
     name: 'Darian Nocera',
-    avatar: '/static/images/authors/darian.png',
+    avatar: '/static/images/authors/darian.jpg',
   },
 }
 
