@@ -6,7 +6,7 @@ import pageContent from '@/data/pageContent'
 import CardLayout from '@/components/listings/CardLayout'
 
 export const POSTS_PER_PAGE = 10
-const PAGE_TITLE = 'Posts'
+const PAGE_TITLE = 'Blog'
 
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter()
