@@ -17,11 +17,11 @@ export default function AuthorLayout({ children, frontMatter }) {
           <h4 className='pb-2 pt-4 text-2xl font-bold leading-8 tracking-tight'>{name}</h4>
           <div className='font-semibold text-gray-500 dark:text-gray-400'>{company}</div>
           <div className='mb-8 flex justify-center space-x-3 pt-2'>
-            <SocialIcon kind='website' href={website} />
+            {/* <SocialIcon kind='website' href={website} /> */}
             <SocialIcon kind='mail' href={`mailto:${email}`} />
             <SocialIcon kind='linkedin' href={linkedin} />
-            <SocialIcon kind='medium' href={medium} />
-            <SocialIcon kind='x' href={x} />
+            {/* <SocialIcon kind='medium' href={medium} /> */}
+            {/* <SocialIcon kind='x' href={x} /> */}
           </div>
           {bio ? <div className='mb-8 pt-4  text-sm font-medium text-gray-500 dark:text-gray-300'>{bio}</div> : null}
           <CtaButton text='Schedule 30 Minutes' action='schedule' link='https://calendly.com/soul-science/30' />
