@@ -1,7 +1,7 @@
 const footerNavLinks = [
   {
     title: 'All Posts',
-    href: '/posts',
+    href: '/blog',
   },
   {
     title: 'About',
