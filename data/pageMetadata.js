@@ -11,10 +11,14 @@ const pageMetadata = {
     title: '404 - Not Found',
     description: 'Oops!',
   },
-  Posts: {
-    title: 'All Posts',
+  Blog: {
+    title: 'All Blog Posts',
     description:
-      'All posts on topics including spirituality, psychedelics, health & wellness, and meditation & mindfulness',
+      'All blog posts on topics including spirituality, psychedelics, health & wellness, and meditation & mindfulness',
+  },
+  Resources: {
+    title: 'Goodies',
+    description: 'Free resources including guided meditations, yoga flows, and more.',
   },
   Tags: {
     title: 'Topics',

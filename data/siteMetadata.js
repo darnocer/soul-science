@@ -1,14 +1,13 @@
 const siteMetadata = {
   title: 'Soul Science Wellness',
   author: 'Darian',
-  description:
-    'Subscribe to the Soul Signals newsletter for short insights on discovering meaning, purpose, and fulfillment.',
+  description: 'Subscribe for short insights on mindfulness & daily self-cultivation.',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://www.soul-science.com',
   siteRepo: 'https://github.com/darnocer/soul-science',
   siteLogo: '/static/images/logos/logo.png',
-  image: '/static/images/authors/darian.png',
+  image: '/static/images/authors/darian.jpg',
   socialBanner: '/static/images/default-social-share.png',
   website: 'https://www.dnocera.com',
   email: 'darian@soul-science.com',
