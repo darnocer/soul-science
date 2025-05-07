@@ -7,6 +7,7 @@ import Twitter from './twitter.svg?react'
 import Medium from './medium.svg?react'
 import Website from './website.svg?react'
 import X from './x.svg?react'
+import Instagram from './instagram.svg?react'
 
 // Icons taken from: https://simpleicons.org/
 
@@ -20,6 +21,7 @@ const components = {
   medium: Medium,
   website: Website,
   x: X,
+  instagram: Instagram,
 }
 
 const SocialIcon = ({ kind, href, size = 8 }) => {

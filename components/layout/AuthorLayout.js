@@ -5,7 +5,7 @@ import Heading from '@/components/headings/Heading'
 import CtaButton from '@/components/links/CtaButton'
 
 export default function AuthorLayout({ children, frontMatter }) {
-  const { name, avatar, company, email, linkedin, bio, medium, website, x } = frontMatter
+  const { name, avatar, company, email, linkedin, bio, medium, website, x, instagram } = frontMatter
 
   return (
     <div className='mx-auto max-w-5xl'>
@@ -17,9 +17,10 @@ export default function AuthorLayout({ children, frontMatter }) {
           <h4 className='pb-2 pt-4 text-2xl font-bold leading-8 tracking-tight'>{name}</h4>
           <div className='font-semibold text-gray-500 dark:text-gray-400'>{company}</div>
           <div className='mb-8 flex justify-center space-x-3 pt-2'>
-            {/* <SocialIcon kind='website' href={website} /> */}
+            <SocialIcon kind='website' href={website} />
             <SocialIcon kind='mail' href={`mailto:${email}`} />
             <SocialIcon kind='linkedin' href={linkedin} />
+            <SocialIcon kind='instagram' href={instagram} />
             {/* <SocialIcon kind='medium' href={medium} /> */}
             {/* <SocialIcon kind='x' href={x} /> */}
           </div>
