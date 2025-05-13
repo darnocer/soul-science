@@ -20,12 +20,12 @@ export default function AuthorLayout({ children, frontMatter }) {
             <SocialIcon kind='website' href={website} />
             <SocialIcon kind='mail' href={`mailto:${email}`} />
             <SocialIcon kind='linkedin' href={linkedin} />
-            <SocialIcon kind='instagram' href={instagram} />
+            {/* <SocialIcon kind='instagram' href={instagram} /> */}
             {/* <SocialIcon kind='medium' href={medium} /> */}
             {/* <SocialIcon kind='x' href={x} /> */}
           </div>
           {bio ? <div className='mb-8 pt-4  text-sm font-medium text-gray-500 dark:text-gray-300'>{bio}</div> : null}
-          <CtaButton text='Schedule 30 Minutes' action='schedule' link='https://calendly.com/soul-science/30' />
+          <CtaButton text='Schedule 30 Minutes' action='schedule' link='https://calendly.com/soulsciencehq/30' />
         </aside>
         <main className='prose max-w-none font-serif  text-gray-800 dark:prose-dark dark:text-gray-200 xl:col-span-2'>
           {children}

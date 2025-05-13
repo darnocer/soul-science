@@ -9,7 +9,7 @@ const footerNavLinks = [
   },
   {
     title: 'Contact',
-    href: 'mailto:darian@soul-science.com',
+    href: 'mailto:darian@soulsciencehq.com',
   },
 ]
 
