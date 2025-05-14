@@ -6,7 +6,7 @@ import formatDate from '@/lib/utils/formatDate'
 
 const BlogSidebar = ({ author, tags, next, prev, type, date }) => {
   return (
-    <aside className='mt-6 rounded-md border border-gray-900 bg-white px-4 py-4 dark:border-gray-700 dark:bg-black xl:sticky xl:top-24 xl:col-start-4 xl:row-span-2 xl:max-h-max'>
+    <aside className='mt-6 rounded-md border-2 border-gray-900 bg-white px-4 py-4 dark:border-gray-700 dark:bg-black xl:sticky xl:top-24 xl:col-start-4 xl:row-span-2 xl:max-h-max'>
       <div className='divide-y divide-gray-200 text-sm font-medium leading-5 dark:divide-gray-700'>
         {date ? (
           <dl>

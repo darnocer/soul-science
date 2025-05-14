@@ -143,7 +143,7 @@ export const BlogNewsletterForm = ({
   disclaimer = true,
 }) => (
   <div className='mt-6 flex items-center justify-center'>
-    <div className='mx-0 w-full rounded-md border border-gray-900 bg-gray-100 px-6 py-8 dark:border-gray-600/60 dark:bg-black md:mx-6'>
+    <div className='mx-0 w-full rounded-md border-2 border-gray-900 bg-gray-100 px-6 py-8 dark:border-gray-600/60 dark:bg-black md:mx-6'>
       <NewsletterForm title={title} description={description} disclaimer={disclaimer} />
     </div>
   </div>
