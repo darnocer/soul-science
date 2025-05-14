@@ -229,7 +229,7 @@ ul > li:not(.no-arrow) {
 ul > li:not(.no-arrow)::before {
   content: '\279C'; /* This is the unicode for the arrow symbol */
 
-  color: var(--accent) !important;
+  color: var(--tertiary) !important;
 
   position: absolute;
 
