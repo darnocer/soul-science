@@ -1,6 +1,6 @@
 ---
 title: Are you happy?
-summary: You have some options.
+summary: You have 3 options.
 date: 2025-02-14
 aliases: 
 draft: false
@@ -35,11 +35,15 @@ Leaving may not always be possible, but there's almost always _something_ you ca
 
 And if you can't, your only real option is to accept it **fully** and to stop resisting reality as it is. Otherwise, you're left with one alternative: <span className="bold-underline">suffering</span>.
 
-We constantly overcomplicate things. We create problems for ourselves, when there are really only situations that need to be dealt with. 
+We constantly overcomplicate things. We create problems for ourselves, when there are really only _situations_ that need to be dealt with. 
 
-But if you don't like the situation you're in, you **do** have the power to change your relationship to it.
+> [!quote] A situation [...] either needs to be dealt with or accepted...  Why make it into a problem? Why make anything into a problem? Isn't life challenging enough as it is? What do you need problems for? 
+> 
+> — Eckart Tolle (The Power of Now)
 
-Take control of your life by employing one of these options. 
+But if you don't like the situation you're in, you **do** have the power to change it, or at the very least, change your relationship to it.
+
+So take control of your life by employing one of these options to any situation causing discontent. 
 
 Stop waiting for life to happen to you— **make it happen instead**.
 

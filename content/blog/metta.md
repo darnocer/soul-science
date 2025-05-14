@@ -130,9 +130,13 @@ Feel free to modify these categories to better align with your own perspective a
 11. May All Human Beings ...
 12. May All Beings in Lower Realms ... [^4]
 
+## Summary
+
+In summary, to practice Metta, memorize the [4 Metta phrases](#metta-phrases) in order. Select a [Metta Category](#metta-categories) to work with, usually starting with yourself. Typically working with a single category per session, slowly and silently repeat the phrases for your chosen category while sitting in meditation, concentrating on the words as your [object of meditation](meditation-objects). Select people for each category and progress through the categories over the course of your practice based on the guidelines above. When working with the ["All Beings"](#working-with-all-beings) category, select one of the three outlined methods. 
+
 ## Conclusion
 
-Mindfulness is often seen as a practice of the "mind", whereas Metta is considered more "heart"-centered, at least in the West. In the original teachings, however, the term _citta_ translates to "heart-mind," as there is no distinction between heart and mind. You may find as you deepen your practice, the line between Metta and Mindfulness begins to blur.
+It's important to understand Metta practice is really not separate from mindfulness; rather, it's an essential complement to it. While mindfulness is often seen as a practice of the "mind", whereas Metta is considered more "heart"-centered— at least in the West— in the original teachings, the term _citta_ translates to "heart-mind," as there is no distinction between heart and mind. You may find as you deepen your practice, the line between Metta and Mindfulness begins to blur.
 
 ---
 
