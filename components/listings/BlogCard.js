@@ -45,7 +45,7 @@ export default function BlogCard({ post, badge = false }) {
         <div className='flex flex-grow flex-col gap-4 p-4'>
           <Tags tags={tags} />
           <div className='flex flex-col gap-2'>
-            <h3 className='text-xl font-bold text-gray-900 dark:text-gray-200'>{title}</h3>
+            <h3 className='text-xl font-bold capitalize text-gray-900 dark:text-gray-200'>{title}</h3>
             <p className='flex-grow text-sm font-medium text-gray-700 dark:text-gray-400'>{summary}</p>
           </div>
           {author && (

@@ -4,6 +4,10 @@ const footerNavLinks = [
     href: '/blog',
   },
   {
+    title: 'All Topics',
+    href: '/tags',
+  },
+  {
     title: 'About',
     href: '/about',
   },

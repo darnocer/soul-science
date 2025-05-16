@@ -11,10 +11,10 @@ export default function TagList({ tags, heading, level = 'h2' }) {
     <SectionContainer>
       {heading ? <Heading level={level}>{heading}</Heading> : null}
       <div className='mb-6 flex flex-wrap justify-start'>
-        <span className='font-semibold text-gray-500 dark:text-gray-400'>
+        <span className='font-semibold  text-gray-500 dark:text-gray-400'>
           {Object.keys(tags).length === 0 && 'No tags found.'}
         </span>
-        <Tags tags={sortedTags} />
+        <Tags tags={sortedTags} align='center' />
       </div>
     </SectionContainer>
   )
