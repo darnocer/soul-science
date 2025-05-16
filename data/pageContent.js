@@ -2,16 +2,18 @@ const pageContent = {
   home: {
     hero: {
       heading: 'Soul Signals',
-      subtitle: 'Microdoses of wisdom for truth seekers.',
+      subtitle: 'Microdoses of wisdom for curious truth seekers.',
       description:
-        'Subscribe to the Soul Signals newsletter for short insights on mindfulness & daily self-cultivation.',
+        'Subscribe to the Soul Signals newsletter for practical insights on mindful living and daily self-cultivation practices.',
     },
     posts: {
       micro: {
         heading: 'Microdoses',
+        description: 'Bite-sized practical insights for daily living.',
       },
       macro: {
         heading: 'Macrodoses',
+        description: 'Expanded guides for deeper practice.',
       },
     },
   },
@@ -35,8 +37,8 @@ const pageContent = {
     title: 'Goodies',
   },
   tags: {
-    title: 'Tags',
-    description: 'Blog topics',
+    title: 'Topics',
+    description: 'All post topics',
   },
   tag: {
     description: (tag) => `Posts tagged with #${tag}`,

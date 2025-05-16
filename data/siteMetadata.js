@@ -1,7 +1,7 @@
 const siteMetadata = {
   title: 'Soul Science Wellness',
   author: 'Darian',
-  description: 'Subscribe for short insights on mindfulness & daily self-cultivation.',
+  description: 'Subscribe for practical insights on mindful living and daily self-cultivation practices.',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://www.soulsciencehq.com',
