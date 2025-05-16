@@ -12,7 +12,7 @@ tags:
   - psychedelics
 layout:
   - PostLayout
-image: mushrooms
+image: lsd
 author: darian
 ---
 

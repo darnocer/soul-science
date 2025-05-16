@@ -132,7 +132,7 @@ Feel free to modify these categories to better align with your own perspective a
 
 ## Summary
 
-In summary, to practice Metta, memorize the [4 Metta phrases](#metta-phrases) in order. Select a [Metta Category](#metta-categories) to work with, usually starting with yourself. Typically working with a single category per session, slowly and silently repeat the phrases for your chosen category while sitting in meditation, concentrating on the words as your [object of meditation](meditation-objects). Select people for each category and progress through the categories over the course of your practice based on the guidelines above. When working with the ["All Beings"](#working-with-all-beings) category, select one of the three outlined methods. 
+In summary, to practice Metta, memorize the [4 Metta phrases](#metta-phrases) in order. Select a [Metta Category](#metta-categories) to work with, usually starting with yourself. Typically working with a single category per session, slowly and silently repeat the phrases for your chosen category while sitting in meditation, concentrating on the words as your [object of meditation](/meditation-objects). Select people for each category and progress through the categories over the course of your practice based on the guidelines above. When working with the ["All Beings"](#working-with-all-beings) category, select one of the three outlined methods. 
 
 ## Conclusion
 
