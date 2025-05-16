@@ -21,7 +21,7 @@ export default function AuthorLayout({ children, frontMatter }) {
             <SocialIcon kind='mail' href={`mailto:${email}`} />
             <SocialIcon kind='linkedin' href={linkedin} />
             {/* <SocialIcon kind='instagram' href={instagram} /> */}
-            {/* <SocialIcon kind='medium' href={medium} /> */}
+            <SocialIcon kind='medium' href={medium} />
             {/* <SocialIcon kind='x' href={x} /> */}
           </div>
           {bio ? <div className='mb-8 pt-4  text-sm font-medium text-gray-500 dark:text-gray-300'>{bio}</div> : null}
