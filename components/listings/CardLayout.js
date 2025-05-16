@@ -28,7 +28,9 @@ export default function CardLayout({ posts, heading, description, level, badge =
 
   return (
     <SectionContainer padding='medium' container='large'>
-      <Heading level={level}>{heading}</Heading>
+      <Heading level={level} description={description}>
+        {heading}
+      </Heading>
       <div className='space-y-4'>
         <div className='mb-10 space-y-2 text-center'>
           <div className='relative max-w-lg'>

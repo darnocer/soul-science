@@ -32,8 +32,17 @@ export default function Home({ microPosts, macroPosts }) {
             subtitle={content.hero.subtitle}
             description={content.hero.description}
           />
-          <CardLayout posts={microPosts} heading={content.posts.micro.heading} />
-          <CardLayout posts={macroPosts} badge={true} heading={content.posts.macro.heading} />
+          <CardLayout
+            posts={microPosts}
+            description={content.posts.micro.description}
+            heading={content.posts.micro.heading}
+          />
+          <CardLayout
+            posts={macroPosts}
+            badge={true}
+            description={content.posts.macro.description}
+            heading={content.posts.macro.heading}
+          />
         </>
       )}
     </MetadataWrapper>
