@@ -2,9 +2,9 @@ const pageContent = {
   home: {
     hero: {
       heading: 'Soul Signals',
-      subtitle: 'Microdoses of wisdom for curious truth seekers.',
+      subtitle: 'Insights for intentional living.',
       description:
-        'Subscribe to the Soul Signals newsletter for practical insights on mindful living and daily self-cultivation practices.',
+        'Subscribe to the Soul Signals newsletter for microdoses of wisdom for daily mindfulness and self-cultivation practices.',
     },
     posts: {
       micro: {
